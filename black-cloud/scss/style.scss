@@ -281,3 +281,27 @@ footer
     -ms-flex-align: end;
     align-items: flex-end;
 }
+
+@media (max-width: 768px)
+{
+    body
+    {
+        grid-template-areas: 'header'
+        'nav'
+        'main'
+        'footer';
+        grid-template-rows: 25vh 1fr 8fr 25vh;
+        grid-template-columns: 1fr;
+    }
+    nav
+    {
+        border-width: 0 0 1px 0;
+        ul
+        {
+            li
+            {
+                display: inline-block;
+            }
+        }
+    }
+}
