@@ -34,8 +34,6 @@ body
 
     display: grid;
     overflow-x: hidden;
-
-    height: 100vh;
     margin: 0;
 
     word-break: break-all;
@@ -44,7 +42,6 @@ body
 
     background-color: black;
     background-image: url(/black-cloud/scr/bg_body.jpeg);
-    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
@@ -93,7 +90,7 @@ header
         {
             display: inline-block;
 
-            margin: 1rem .5rem;
+            margin: 1rem .25rem;
 
             list-style: none;
             a
@@ -282,10 +279,8 @@ footer
     align-items: flex-end;
 }
 
-@media (max-width: 768px)
-{
-    body
-    {
+@media (max-width: 768px) {
+    body {
         grid-template-areas: 'header'
         'nav'
         'main'
@@ -293,14 +288,51 @@ footer
         grid-template-rows: 25vh 1fr 8fr 25vh;
         grid-template-columns: 1fr;
     }
-    nav
-    {
+    header {
+        padding: 0 .5rem;
+    }
+    nav {
         border-width: 0 0 1px 0;
-        ul
-        {
-            li
-            {
+        text-align: center;
+        ul {
+            margin: 0;
+            li {
                 display: inline-block;
+                border-radius: .5rem;
+                &.logo_li {
+                    display: block;
+                }
+            &:hover:nth-child(n+2) a {
+                padding-left:0;
+            }
+            }
+            .logo {
+                justify-content: center;
+            }
+        }
+    }
+    main {
+        .heading {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
+        .box_holder {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: .25rem;
+            & div {
+                padding: 1rem;
+                img,
+                h2 {
+                    display: inline-block;
+                    margin: 0;
+                }
+                h2 {
+                    font-size: 2rem;
+                }
+                img {
+                    margin-right: 1.2rem;
+                }
             }
         }
     }

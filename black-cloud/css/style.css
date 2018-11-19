@@ -29,14 +29,12 @@ body {
   display: -ms-grid;
   display: grid;
   overflow-x: hidden;
-  height: 100vh;
   margin: 0;
   word-break: break-all;
   -webkit-hyphens: auto;
   hyphens: auto;
   background-color: black;
   background-image: url(/black-cloud/scr/bg_body.jpeg);
-  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   -ms-hyphens: auto;
@@ -82,7 +80,7 @@ header ul {
 
 header ul li {
   display: inline-block;
-  margin: 1rem .5rem;
+  margin: 1rem .25rem;
   list-style: none;
 }
 
@@ -262,11 +260,57 @@ footer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  header {
+    padding: 0 .5rem;
+  }
   nav {
     border-width: 0 0 1px 0;
+    text-align: center;
+  }
+  nav ul {
+    margin: 0;
   }
   nav ul li {
     display: inline-block;
+    border-radius: .5rem;
+  }
+  nav ul li.logo_li {
+    display: block;
+  }
+  nav ul li:hover:nth-child(n+2) a {
+    padding-left: 0;
+  }
+  nav ul .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .heading {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  main .box_holder {
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: .25rem;
+  }
+  main .box_holder div {
+    padding: 1rem;
+  }
+  main .box_holder div img,
+  main .box_holder div h2 {
+    display: inline-block;
+    margin: 0;
+  }
+  main .box_holder div h2 {
+    font-size: 2rem;
+  }
+  main .box_holder div img {
+    margin-right: 1.2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
