@@ -37,7 +37,7 @@ body
     background-image: url(/black-cloud/src/bg_body.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
         -ms-hyphens: manual;
     grid-template-areas: 'header header'
     'nav main'
