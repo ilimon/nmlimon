@@ -265,18 +265,24 @@ footer
 {
     display: grid;
 
-    padding: 1rem;
+    padding: .25rem 3rem;
 
     border-width: 1px 0 0 0;
     background-image: url(/black-cloud/scr/oblaka1-min.png);
 
     grid-area: footer;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns:1fr 1fr;
+    justify-content: flex-end;
     align-items: flex-end;
+    font-size: .825rem;
+    .text-right {
+        text-align: right;
+    }
+    .author {
+        color: #22dfa0;
+    }
 }
 
 @media (max-width: 768px) {
