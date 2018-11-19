@@ -6,12 +6,6 @@
             box-sizing: border-box;
 }
 
-html,
-body
-{
-    height: 100%;
-}
-
 html
 {
     font-family: sans-serif;
@@ -37,40 +31,37 @@ body
     margin: 0;
 
     word-break: break-all;
-    -webkit-hyphens: auto;
-            hyphens: auto;
-
+    -webkit-hyphens: manual;
+            hyphens: manual;
     background-color: black;
     background-image: url(/black-cloud/scr/bg_body.jpeg);
     background-position: center center;
     background-size: cover;
-
-        -ms-hyphens: auto;
+        -ms-hyphens: manual;
     grid-template-areas: 'header header'
     'nav main'
     'footer footer';
-    grid-template-rows: 20vh 60vh 20vh;
-    grid-template-columns: 15vw 1fr;
+    -ms-grid-rows:  1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    -ms-grid-columns: 1fr 4fr;
+    grid-template-columns: 1fr 4fr;
 }
 
-a
-{
+a {
     text-decoration: none;
 }
 
 header,
 nav,
 main,
-footer
-{
+footer {
     font-size: 1rem;
     // border-color: black;
 
     border: 0 !important;
     border-style: solid;
 }
-header
-{
+header {
     display: grid;
 
     padding: 0 5rem;
@@ -82,19 +73,16 @@ header
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    ul
-    {
+    ul {
         margin: 0;
         padding: 0;
-        li
-        {
+        li {
             display: inline-block;
 
             margin: 1rem .25rem;
 
             list-style: none;
-            a
-            {
+            a {
                 font-weight: bold;
 
                 padding: .25rem .75rem;
@@ -103,40 +91,34 @@ header
                 border-radius: .25rem;
                 background-color: rgba(0,0,0,.03);
             }
-            &:last-child a
-            {
+            &:last-child a {
                 color: #22dfa0;
             }
         }
     }
 }
-nav
-{
+nav {
     border-width: 0;
 
     grid-area: nav;
-    .logo
-    {
+    .logo {
         display: grid;
 
         -webkit-box-pack: end;
         -ms-flex-pack: end;
         justify-content: flex-end;
-        img
-        {
+        img {
             max-width: 74px;
 
             -webkit-filter: brightness(0) invert(1);
                     filter: brightness(0) invert(1);
         }
     }
-    ul
-    {
+    ul {
         margin: 0;
         margin-top: 1.25rem;
         padding: 0;
-        li
-        {
+        li {
             line-height: 1.5rem;
 
             padding: .5rem;
@@ -145,18 +127,15 @@ nav
 
             border-top-right-radius: .5rem;
             border-bottom-right-radius: .5rem;
-            a
-            {
+            a {
                 color: white;
             }
-            &:hover:nth-child(n+2)
-            {
+            &:hover:nth-child(n+2) {
                 -webkit-transition: .25s ease-in-out;
                         transition: .25s ease-in-out;
 
                 background-color: rgba(255,255,255,.18);
-                a
-                {
+                a {
                     padding-left: 10px;
 
                     -webkit-transition: .25s ease-in-out;
@@ -166,34 +145,29 @@ nav
         }
     }
 }
-main
-{
+main {
     padding: .5rem 1rem;
 
     color: white;
     border-width: 0 0 0 1px;
 
     grid-area: main;
-    .heading
-    {
+    .heading {
         display: grid;
 
         grid-template-columns: 2fr 1fr;
-        h1
-        {
+        h1 {
             font-size: 3rem;
 
             text-transform: uppercase;
         }
-        .sub_title
-        {
+        .sub_title {
             font-size: 1.25rem;
 
             position: relative;
-
+            
             color: #c558fd;
-            &:after
-            {
+            &:after {
                 position: absolute;
                 z-index: -1;
                 top: 0;
@@ -274,8 +248,12 @@ footer
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns:1fr 1fr;
-    justify-content: flex-end;
-    align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     font-size: .825rem;
     .text-right {
         text-align: right;
@@ -291,7 +269,9 @@ footer
         'nav'
         'main'
         'footer';
-        grid-template-rows: 25vh 1fr 8fr 25vh;
+        -ms-grid-rows: 1fr 1fr 5fr 1fr;
+        grid-template-rows: 1fr 1fr 5fr 1fr;
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
     header {
@@ -313,7 +293,9 @@ footer
             }
             }
             .logo {
-                justify-content: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
             }
         }
     }
