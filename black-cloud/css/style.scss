@@ -315,6 +315,9 @@ footer
         .heading {
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr;
+            .title {
+                text-align: center;
+            }
         }
         .box_holder {
         grid-template-rows: 1fr 1fr 1fr;
