@@ -7,7 +7,7 @@ let gulp            = require('gulp'),
     csso            = require('gulp-csso');
 
 gulp.task('prefix-comb', () =>
-    gulp.src('./*scss/*.scss')
+    gulp.src('./css/*.scss')
     .pipe(autoprefixer({browsers: ['last 2 versions'],cascade: false}))
     .pipe(csscomb())
     .pipe(gulp.dest('./'))
