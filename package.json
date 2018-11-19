@@ -1,0 +1,28 @@
+{
+  "name": "andrejsharapov.github.io",
+  "version": "1.0.0",
+  "description": "Web page for testing and publishing own projects",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrejsharapov/andrejsharapov.github.io.git"
+  },
+  "author": "Andrej Sharapov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrejsharapov/andrejsharapov.github.io/issues"
+  },
+  "homepage": "https://github.com/andrejsharapov/andrejsharapov.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "gulp": "^3.9.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-csso": "^3.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-ruby-sass": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}
