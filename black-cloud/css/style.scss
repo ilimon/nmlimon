@@ -69,7 +69,7 @@ header {
 
     border-width: 0 0 1px 0;
     background-image: url(/black-cloud/src/oblaka2-min.png);
-
+    background-position: center;
     grid-area: header;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
@@ -221,7 +221,6 @@ main {
     .box_holder
     {
         display: grid;
-
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 2rem;
@@ -244,7 +243,7 @@ footer
 
     border-width: 1px 0 0 0;
     background-image: url(/black-cloud/src/oblaka1-min.png);
-
+    background-position: center;
     grid-area: footer;
     display: grid;
     grid-template-rows: 1fr;
@@ -264,14 +263,14 @@ footer
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     body {
         grid-template-areas: 'header'
         'nav'
         'main'
         'footer';
-        -ms-grid-rows: 1fr 1fr 6fr 1fr;
-        grid-template-rows: 1fr 1fr 6fr 1fr;
+        -ms-grid-rows: 23vh 1fr 6fr 23vh;
+        grid-template-rows: 23vh 1fr 6fr 23vh;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
