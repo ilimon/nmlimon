@@ -14,4 +14,4 @@ Web page for testing and publishing own projects
 |---|:-:|--:|
 |   |   |   |
 
-[1]: |https://andrejsharapov.github.io/black-cloud/| "Black cloud · All your projects are always with you. Wherever you go!"
+[1]: https://andrejsharapov.github.io/black-cloud/ "Black cloud · All your projects are always with you. Wherever you go!"
