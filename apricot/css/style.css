@@ -67,18 +67,24 @@ footer {
   align-items: center;
 }
 
-header h1 {
-  font-size: 3rem;
-}
-
 footer {
   min-height: 10vh;
+}
+
+header .git_links {
+  position: absolute;
+  right: 1rem;
+  top: .75rem;
 }
 
 header svg {
   margin-right: .25rem;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+header h1 {
+  font-size: 3rem;
 }
 
 main {
