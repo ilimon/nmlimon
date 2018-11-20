@@ -132,6 +132,10 @@ main article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -153,6 +157,68 @@ main article:after {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: inherit;
   z-index: -2;
+}
+
+main article .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main article .about .author {
+  width: 128px;
+  border-radius: 50%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 20px 60px -10px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0 20px 60px -10px;
+}
+
+main article .about h2 {
+  text-transform: uppercase;
+  margin-bottom: .12rem;
+}
+
+main article .about p {
+  color: #8d8d8d;
+}
+
+main article .frashes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+main article .frashes div {
+  margin: .5rem 1rem;
+  height: 160px;
+  border-radius: .5rem;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 20px 60px -10px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0 20px 60px -10px;
+  overflow: hidden;
+}
+
+main article .frashes div img {
+  display: block;
+  width: 100%;
 }
 
 main aside {
