@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apricot · </title>
+    <link rel='shortcut icon' href='/apricot/src/favicon.ico' />
+    <meta name='desrciption' content='Black cloud · All your projects are always with you. Wherever you go!' />
+    <meta name='author' content='Andrej Sharapov'>
+    <link rel='stylesheet' href='/apricot/css/style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <svg version="1.1" width="64" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 468.293 468.293" xml:space="preserve">
+            <g>
+                <path d="M287.645,394.524c-19.774,0-37.174-1.819-52.598-5.062
+                    C97.106,360.513,124.314,216.244,124.314,216.244s25.785,15.977,71.344,28.158c43.581,11.706,105.275,19.853,179.862,7.356
+                    c25.627-4.271,52.756-10.994,81.151-20.881c2.214-0.712,4.508-1.582,6.802-2.373C474.626,224.47,483.01,394.524,287.645,394.524z"/>
+            </g>
+        </svg>
+        <h1>Apricot</h1>
+    </header>
+    <main>
+        <div class="parallax">
+            <div class="layer layer-one"></div>
+            <div class="layer layer-two"></div>
+        </div>
+        <article>
+                article
+        </article>
+        <aside>
+            <ul>
+                <li><a href="#" class="nav_link active">Home</a></li>
+                <li><a href="#" class="nav_link">Product</a></li>
+                <li><a href="#" class="nav_link">Pricing</a></li>
+                <li><a href="#" class="nav_link">Contact</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <div class="copyright">&copy; 2018 by Andrej Sharapov</div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            var currentX = '';
+            var currentY = '';
+            var movementConstant = .015;
+            $(document).mousemove(function(e) {
+                  if(currentX == '') currentX = e.pageX;
+                var xdiff = e.pageX - currentX;
+                currentX = e.pageX;
+                if(currentY == '') currentY = e.pageY;
+                var ydiff = e.pageY - currentY;
+                currentY = e.pageY; 
+                $('.parallax div').each(function(i, el) {
+                    var movement = (i + 1) * (xdiff * movementConstant);
+                    var movementy = (i + 1) * (ydiff * movementConstant);
+                    var newX = $(el).position().left + movement;
+                    var newY = $(el).position().top + movementy;
+                    $(el).css('left', newX + 'px');
+                    $(el).css('top', newY + 'px');
+                });
+            });
+        </script>
+    </footer>
+</body>
+</html>
