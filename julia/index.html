@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Детские праздники | Кулинарная студия Юлии Высоцкой</title>
+    <link rel='shortcut icon' href='/julia/src/favicon.ico' />
+    <meta name='desrciption' content='Кулинарная студия Юлии Высоцкой: мастер-классы, готовим с поваром, быстрые мастер-классы' />
+    <meta name='author' content='Andrej Sharapov'>
+    <link rel='stylesheet' href='/julia/css/style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Кулинарная студия Юлии Высоцкой</h1>
+    </header>
+    <div class="parallax">
+        <div class="layer layer-one"><img src="/julia/src/sharik.png" alt="sharik"></div>
+        <div class="layer layer-two"><img src="/julia/src/pirog.png" alt="pirog"></div>
+        <div class="layer layer-three"><img src="/julia/src/kolpak.png" alt="kolpak"></div>
+    </div>
+    <main>
+        <article>
+            <div class="about">
+                <img class="author" src="/julia/src/logo.png" alt="Julia Vysotskaya">
+                <div>
+                    <h2>Детские праздники: объединяют семью, дарят яркие впечатления<br> и запоминаются надолго</h2>
+                    <p class="max-991">Планируете устроить для ребенка незабываемый праздник в честь дня рождения или начала школьных каникул? «Кулинарная студия Юлии Высоцкой» поможет воплотить в жизнь любую, даже самую невероятную задумку.</p>
+                </div>
+            </div>
+            <p class="min-991">Планируете устроить для ребенка незабываемый праздник в честь дня рождения или начала школьных каникул? «Кулинарная студия Юлии Высоцкой» поможет воплотить в жизнь любую, даже самую невероятную задумку.</p>
+            <div class="events">
+                <div class="active">
+                    <h3>«Ну ка дружно»</h3>
+                    <img src="/julia/src/all.jpg" alt="">
+                </div>
+                <div>
+                    <h3>«Сладкая сказка»</h3>
+                    <img src="/julia/src/two_child.jpg" alt="">
+                </div>
+                <div>
+                    <h3>«Все в отрыв»</h3>
+                    <img src="/julia/src/happy.jpg" alt="">
+                </div>
+                <div>
+                    <h3>«Новый элемент»</h3>
+                    <img src="/julia/src/fore_child.jpg" alt="">
+                </div>
+            </div>
+            <button type="button">Заказать праздник!</button>
+        </article>
+        <aside>
+            <ul>
+                <li><a href="#" class="nav_link">Праздники</a></li>
+                <li><a href="#" class="nav_link">Стоимость</a></li>
+                <li><a href="#" class="nav_link">Кондитерская</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <div class="footer_nav">
+            <ul>                
+                <li><a href="#" class="nav_link active">Студия</a></li>
+                <li><a href="#" class="nav_link">Расписание</a></li>
+                <li><a href="#" class="nav_link">Контакты</a></li>
+            </ul>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            var currentX = '';
+            var currentY = '';
+            var movementConstant = .015;
+            $(document).mousemove(function (e) {
+                if (currentX == '') currentX = e.pageX;
+                var xdiff = e.pageX - currentX;
+                currentX = e.pageX;
+                if (currentY == '') currentY = e.pageY;
+                var ydiff = e.pageY - currentY;
+                currentY = e.pageY;
+                $('.parallax div').each(function (i, el) {
+                    var movement = (i + 1) * (xdiff * movementConstant);
+                    var movementy = (i + 1) * (ydiff * movementConstant);
+                    var newX = $(el).position().left + movement;
+                    var newY = $(el).position().top + movementy;
+                    $(el).css('left', newX + 'px');
+                    $(el).css('top', newY + 'px');
+                });
+            });
+        </script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </footer>
+</body>
+
+</html>
