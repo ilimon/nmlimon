@@ -12,7 +12,7 @@ Web page for testing and publishing own projects
 
 ## 2019
 
-| Name | Description | Month | Repo |
+| Pages | Description | Month | Repo |
 |---|---|:-:|--:|
 |  |  |  |  |
 
