@@ -167,11 +167,11 @@ main article .about {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 main article .about .author {
@@ -182,7 +182,6 @@ main article .about .author {
 
 main article .about div {
   padding-left: 1rem;
-  text-align: justify;
 }
 
 main article .about div h2 {
@@ -264,7 +263,7 @@ main article button {
   text-transform: uppercase;
   background: linear-gradient(135deg, #ffae27 0%, #de496d 100%);
   -webkit-box-shadow: 0 32px 84px #f89e01;
-          box-shadow: 0 32px 84px #f89e01;
+  box-shadow: 0 32px 84px #f89e01;
 }
 
 main article button:focus {
@@ -294,15 +293,15 @@ main aside ul {
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 main aside ul::before, main aside ul::after {
   position: absolute;
   left: 40%;
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
   content: '';
   height: 1px;
   width: 20%;
@@ -384,17 +383,14 @@ footer .footer_nav ul li a {
   }
   main article {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
-  }
-  main article .about div {
-    text-align: left;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
   }
   main article .events {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
   }
   main article .events div {
     width: 45%;
