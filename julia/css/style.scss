@@ -277,7 +277,8 @@ main {
         outline: none;
       }
       &:active {
-        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+                transform: translateY(5px);
         -webkit-box-shadow: 0 7px 34px #f89e01;
                 box-shadow: 0 7px 34px #f89e01;
       }

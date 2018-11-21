@@ -289,7 +289,9 @@ main {
 @media (max-width:991px) {
     main {
         article {
-            flex: 0 0 75%;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 75%;
+                    flex: 0 0 75%;
         }
     }
 }
