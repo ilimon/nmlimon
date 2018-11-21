@@ -466,4 +466,16 @@ footer .footer_nav ul li a {
     margin: 1rem auto;
   }
 }
+
+@media (max-width: 480px) {
+  main article .about .author {
+    display: none;
+  }
+  main article .about div {
+    padding-left: 0;
+  }
+  main article .events div {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

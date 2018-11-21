@@ -468,3 +468,23 @@ footer {
     }
   }
 }
+
+@media (max-width: 480px) {
+  main {
+    article {
+      .about {
+        .author {
+          display: none;
+        }
+        div {
+          padding-left: 0;
+        }
+      }
+      .events {
+        div {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
