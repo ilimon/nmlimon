@@ -19,25 +19,25 @@ html {
 
 body {
   font-size: 62.5%;
-  overflow-x: hidden;
-  margin: 0;
-  -webkit-hyphens: manual;
-  hyphens: manual;
-  -ms-hyphens: manual;
-  background-color: #ffcc66;
-  background-image: linear-gradient(45deg, #ff7834, #ffdd34);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+  background-color: #fc6;
+  background-image: linear-gradient(45deg, #ff7834, #ffdd34);
+  -ms-hyphens: manual;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 100vh;
-  height: 100%;
 }
 
 a, header,
@@ -73,8 +73,8 @@ footer {
 
 header .git_links {
   position: absolute;
-  right: 1rem;
   top: .75rem;
+  right: 1rem;
 }
 
 header svg {
@@ -88,10 +88,11 @@ header h1 {
 }
 
 main {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  min-height: 70vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-flow: row;
@@ -99,17 +100,15 @@ main {
   -webkit-box-pack: stretch;
   -ms-flex-pack: stretch;
   justify-content: stretch;
-  min-height: 70vh;
 }
 
 main .parallax {
   position: absolute;
+  z-index: -1;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: hidden;
-  z-index: -1;
 }
 
 main .parallax .layer {
@@ -131,60 +130,60 @@ main .parallax .layer.layer-two {
 
 main article {
   position: relative;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 60%;
-  flex: 0 0 60%;
-  margin-left: auto;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  color: black;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 1rem;
-  color: black;
 }
 
 main article:after {
   position: absolute;
+  z-index: -2;
   top: -1rem;
   right: 1rem;
   bottom: -1rem;
   left: 1rem;
   content: '';
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: inherit;
-  z-index: -2;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 main article .about {
   position: relative;
-  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center;
 }
 
 main article .about .author {
@@ -195,8 +194,8 @@ main article .about .author {
 }
 
 main article .about h2 {
-  text-transform: uppercase;
   margin-bottom: .12rem;
+  text-transform: uppercase;
 }
 
 main article .about p {
@@ -207,24 +206,24 @@ main article .frashes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: row;
+  padding: 0 1rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 1rem;
 }
 
 main article .frashes div {
-  margin: .5rem 1rem;
+  overflow: hidden;
   height: auto;
+  margin: .5rem 1rem;
   border-radius: .5rem;
   background-color: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 20px 60px -10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 20px 60px -10px;
-  overflow: hidden;
 }
 
 main article .frashes div img {
@@ -242,40 +241,40 @@ main aside {
 }
 
 main aside ul {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0;
 }
 
 main aside ul li {
   position: relative;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  -webkit-writing-mode: rl-tb;
-  -ms-writing-mode: rl-tb;
-  writing-mode: rl-tb;
   height: 12vh;
   margin: auto;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -ms-writing-mode: rl-tb;
+  -webkit-writing-mode: rl-tb;
+  writing-mode: rl-tb;
 }
 
 main aside ul li a {
-  position: relative;
   font-weight: bold;
+  position: relative;
 }
 
 main aside ul li a:hover:after, main aside ul li a.active:after {
   position: absolute;
-  content: '';
   bottom: -.25rem;
   left: 0;
   width: 20px;
   height: 4px;
+  content: '';
   background-color: #fff;
 }
 
@@ -298,23 +297,23 @@ main aside ul li a:hover:after, main aside ul li a.active:after {
     display: none;
   }
   main article {
+    width: 92%;
     margin: 1.5rem auto;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-    width: 92%;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
   }
   main aside {
+    flex-direction: row;
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
     order: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -323,15 +322,15 @@ main aside ul li a:hover:after, main aside ul li a.active:after {
     flex: 0 1 auto;
   }
   main aside ul {
+    flex-direction: row;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
-    flex-direction: row;
   }
   main aside ul li {
+    height: auto;
     -webkit-transform: none;
     transform: none;
-    height: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
