@@ -23,8 +23,8 @@ design by [Andrej Sharapov][designer]
 [designer]: https://twitter.com/andrejsharapov "Andrej Sharapov"
 
 [1]: https://andrejsharapov.github.io/black-cloud/ "Black cloud · All your projects are always with you. Wherever you go!"
-[git1]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/apricot
+[git1]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/black-cloud
 [2]: https://andrejsharapov.github.io/apricot/ "Apricot · In any form and anytime. Fresh Apricots"
-[git2]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/black-cloud
+[git2]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/apricot
 [3]: https://andrejsharapov.github.io/julia/ "Кулинарная студия Юлии Высоцкой: мастер-классы, готовим с поваром, быстрые мастер-классы"
 [git3]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/julia
