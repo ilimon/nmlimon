@@ -26,26 +26,28 @@ body
     font-size: 62.5%;
     font-weight: 400;
 
-    display: grid;
+    display: -ms-grid;
+    display:     grid;
     overflow-x: hidden;
+
+    min-height: 100vh;
     margin: 0;
 
     -webkit-hyphens: manual;
             hyphens: manual;
+
     background-color: black;
     background-image: url(/black-cloud/src/bg_body.jpeg);
-    background-position: center center;
     background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
+
         -ms-hyphens: manual;
-    grid-template-areas: 'header header'
-    'nav main'
-    'footer footer';
-    -ms-grid-rows:  1fr 3.2fr 1fr;
+    grid-template-areas: 'header header' 'nav main' 'footer footer';
+    -ms-grid-rows: 1fr 3.2fr 1fr;
     grid-template-rows: 1fr 3.2fr 1fr;
     -ms-grid-columns: 1fr 4fr;
     grid-template-columns: 1fr 4fr;
-    min-height: 100vh;
 }
 
 a {
@@ -57,19 +59,17 @@ nav,
 main,
 footer {
     font-size: 1rem;
-    // border-color: black;
-
-    border: 0 !important;
-    border-style: solid;
 }
 header {
-    display: grid;
-
+    display: -ms-grid;
+    display:     grid;
     padding: 0 5rem;
-
-    border-width: 0 0 1px 0;
     background-image: url(/black-cloud/src/oblaka2-min.png);
     background-position: center;
+
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: header;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
@@ -99,12 +99,12 @@ header {
     }
 }
 nav {
-    border-width: 0;
-
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
     grid-area: nav;
     .logo {
-        display: grid;
-
+        display: -ms-grid;
+        display:     grid;
         -webkit-box-pack: end;
         -ms-flex-pack: end;
         justify-content: flex-end;
@@ -150,12 +150,15 @@ main {
     padding: .5rem 1rem;
 
     color: white;
-    border-width: 0 0 0 1px;
 
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
     grid-area: main;
     .heading {
-        display: grid;
+        display: -ms-grid;
+        display:     grid;
 
+        -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
         h1 {
             font-size: 3rem;
@@ -188,18 +191,16 @@ main {
                         filter: blur(60px);
             }
         }
-        .get_start
-        {
-            display: grid;
-
+        .get_start {
+            display: -ms-grid;
+            display:     grid;
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
-            button
-            {
+            button {
                 font-size: 2rem;
 
                 display: inline-block;
@@ -218,43 +219,50 @@ main {
             }
         }
     }
-    .box_holder
-    {
-        display: grid;
+    .box_holder {
+        display: -ms-grid;
+        display:     grid;
+
+        -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
+        -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 2rem;
-        img
-        {
+        img {
             -webkit-filter: brightness(0) invert(1);
                     filter: brightness(0) invert(1);
         }
     }
-    a
-    {
+    a {
         color: #22dfa0;
     }
 }
-footer
-{
-    display: grid;
+footer {
+    font-size: .825rem;
+
+    display: -ms-grid;
+    display:     grid;
+    display:     grid;
 
     padding: .25rem 3rem;
 
-    border-width: 1px 0 0 0;
     background-image: url(/black-cloud/src/oblaka1-min.png);
     background-position: center;
+
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: footer;
-    display: grid;
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
-    grid-template-columns:1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    font-size: .825rem;
+    -ms-flex-align: end;
+    align-items: flex-end;
     .text-right {
         text-align: right;
     }
@@ -278,7 +286,6 @@ footer
         padding: 0 .5rem;
     }
     nav {
-        border-width: 0 0 1px 0;
         text-align: center;
         ul {
             margin: 0;
@@ -301,16 +308,20 @@ footer
     }
     main {
         .heading {
+            -ms-grid-rows: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
+            -ms-grid-columns: 1fr;
             grid-template-columns: 1fr;
             .title {
                 text-align: center;
             }
         }
         .box_holder {
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr;
-        grid-gap: .25rem;
+            -ms-grid-rows: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            -ms-grid-columns: 1fr;
+            grid-template-columns: 1fr;
+            grid-gap: .25rem;
             & div {
                 padding: 1rem;
                 img,
