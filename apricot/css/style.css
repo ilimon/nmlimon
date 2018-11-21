@@ -282,8 +282,8 @@ main aside ul li a:hover:after, main aside ul li a.active:after {
 @media (max-width: 991px) {
   main article {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
   }
 }
 
