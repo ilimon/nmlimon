@@ -267,12 +267,19 @@ main {
       border-radius: .35rem;
       color: #fff;
       text-transform: uppercase;
+      -webkit-transition: .15s ease-in-out;
+              transition: .15s ease-in-out;
       background: linear-gradient(135deg, rgb(255, 174, 39) 0%, rgb(222, 73, 109) 100%);
       -webkit-box-shadow: 0 32px 84px #f89e01;
               box-shadow: 0 32px 84px #f89e01;
 
       &:focus {
-        outline: none
+        outline: none;
+      }
+      &:active {
+        transform: translateY(5px);
+        -webkit-box-shadow: 0 7px 34px #f89e01;
+                box-shadow: 0 7px 34px #f89e01;
       }
     }
   }
