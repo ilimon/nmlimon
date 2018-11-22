@@ -172,10 +172,44 @@ article {
 }
 
 article div {
-  width: 49%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 46%;
   margin: 0 auto;
   border-radius: .35rem;
-  background: rgba(17, 17, 51, 0.45);
+  background-image: linear-gradient(135deg, #171746, #224);
+}
+
+article div .icon {
+  position: relative;
+  margin-top: 20px;
+  margin-left: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 64px;
+  height: 64px;
+  font-size: 2.5rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(#6af), to(#6df));
+  background: linear-gradient(to top, #6af, #6df);
+  -webkit-box-shadow: #113 -5px 15px 35px;
+          box-shadow: #113 -5px 15px 35px;
+}
+
+article .female .icon {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f4a), to(#f6d));
+  background-image: linear-gradient(to top, #f4a, #f6d);
 }
 
 aside {
