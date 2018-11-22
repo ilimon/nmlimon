@@ -128,13 +128,18 @@ header {
     align-items: center;
     padding-left: $rem * 3;
     padding-right: $rem;
+    .masthead {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex: 0 1 70%;
+    }
 
     svg {
         transform: rotate(-20deg) translateX(1rem);
     }
 
     h1 {
-        flex: 0 1 70%;
         padding-left: $rem;
         @extend %font;
         font-size: $rem + 3;
@@ -259,8 +264,6 @@ article {
                         top: 50%;
                         left: 0;
                         transform: translateY(-50%);
-                        width: 20px;
-                        height: 20px;
                         font-family: "FontAwesome";
                         content: "\f00c";
                         color: $seagreen;
@@ -304,4 +307,92 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (max-width:991px) {
+    body {
+        background-image: linear-gradient(45deg, $bg, $bg_dark);
+    }
+    header {
+        flex-direction: column;
+        padding-left: 1rem;
+        .masthead,
+        .sign {
+            flex: 0 1 100%;
+        }
+    }
+    main {
+        flex-direction: column;
+    }
+    aside {
+        .nav {
+            width: 100%;
+            padding: $rem;
+            text-align: center;
+            border-radius: .35rem;
+            background-color: $bg;
+            box-shadow: $bg_dark 0 0 42px;
+            li {
+                display: inline-block;
+                padding: .5rem $rem;
+                &:hover {
+                    border-radius: inherit;
+                    background-color: rgba(102, 170, 255,.3); 
+                }
+                &.color_line {
+                    display: block;
+                    margin: .5rem auto;
+                    padding: 0;
+                }
+            }
+        }
+        .social {
+            justify-content: flex-end;
+            li {
+                margin: $rem / 2;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        .masthead {
+            flex-direction: column;
+        }
+        svg {
+            margin: auto;
+            transform: rotate(45deg) translate(1rem, 1rem);
+        }
+        h1 {
+            font-size: 3rem;
+        }
+    }
+    main {
+        article {
+            flex-direction: column;
+            .male,
+            .female {
+                width: 100%;
+                .icon {
+                    right: 1rem;
+                    left: auto;
+                }
+                .card_content {
+                    h2 {
+                        padding-left: 0;
+                    }
+                    ul {
+                        li {
+                            padding-top: .25rem;
+                            padding-bottom: .25rem;
+                        }
+                    }
+                }
+            }
+            .male {
+                margin-bottom: 2rem;
+            }
+        }
+    }
 }
