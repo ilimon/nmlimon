@@ -1,0 +1,156 @@
+$bg: #113;
+$bg_image: linear-gradient(90deg, $bg, #224);
+$mediumseagreen: linear-gradient(to top, #0a7c4e, #0d9);
+$pink: linear-gradient(to top, #f4a, #f6d);
+$lightblue: linear-gradient(to top, #6af, #6df);
+$color: #fff;
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow-x: hidden;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+    -ms-hyphens: manual;
+    font-size: 62.5%;
+    background-color: $bg;
+    background-image: $bg_image;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+%font {
+    font-family: 'Releway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+a,
+header,
+main {
+    @extend %font;
+    color: $color;
+}
+
+a {
+    text-decoration: none;
+}
+
+.green-button {
+    display: block;
+    padding: .75rem 1.5rem;
+    border: 0;
+    border-radius: .35rem;
+    background-image: $mediumseagreen;
+    box-shadow: rgba(0, 221, 153, .5) 0px 0px 32px;
+}
+
+.color_line {
+    width: 50%;
+    margin: 1rem 0;
+    height: 1px;
+    background: $lightblue;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+
+    &.nav {
+        li {
+            line-height: 1.75rem;
+        }
+    }
+
+    &.social {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            transition: .2s ease-in-out;
+            font-size: 2rem;
+            border-radius: 50%;
+            border: 1px dashed $color;
+
+            &:hover {
+                transform: scale(1.2);
+                border: 0;
+                background: $mediumseagreen;
+            }
+        }
+    }
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        @extend %font;
+        font-size: 4rem;
+        color: $color;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    color: $color;
+
+    article,
+    aside {
+        padding: 1rem;
+    }
+}
+
+article {
+    flex: 0 1 80%;
+    order: 1;
+    display: flex;
+    div {
+        width: 49%;
+        margin: 0 auto;
+        border-radius: .35rem;
+        background: rgba(17, 17, 51,.45);
+    }
+}
+
+aside {
+    flex: 0 1 20%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
