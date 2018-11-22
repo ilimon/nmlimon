@@ -29,7 +29,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
   -webkit-hyphens: manual;
   hyphens: manual;
@@ -46,7 +46,7 @@ body {
 a,
 header,
 main, header h1 {
-  font-family: 'Releway', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -61,11 +61,22 @@ a {
   text-decoration: none;
 }
 
+.blue-button,
 .green-button {
   display: block;
   padding: .75rem 1.5rem;
   border: 0;
   border-radius: .35rem;
+}
+
+.blue-button {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#6af), to(#6df));
+  background-image: linear-gradient(to top, #6af, #6df);
+  -webkit-box-shadow: rgba(102, 170, 255, 0.5) 0px 0px 32px;
+          box-shadow: rgba(102, 170, 255, 0.5) 0px 0px 32px;
+}
+
+.green-button {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#0a7c4e), to(#0d9));
   background-image: linear-gradient(to top, #0a7c4e, #0d9);
   -webkit-box-shadow: rgba(0, 221, 153, 0.5) 0px 0px 32px;
@@ -76,8 +87,8 @@ a {
   width: 50%;
   margin: 1rem 0;
   height: 1px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#6af), to(#6df));
-  background: linear-gradient(to top, #6af, #6df);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#6af), to(#6df));
+  background-image: linear-gradient(to top, #6af, #6df);
 }
 
 ul {
@@ -117,7 +128,7 @@ ul.social li {
   border: 1px dashed #fff;
 }
 
-ul.social li:hover {
+ul.social li:hover, ul.social li.active {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   border: 0;
@@ -129,17 +140,42 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 3rem;
+  padding-right: 1rem;
 }
 
 header h1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
+  padding-left: 1rem;
   font-size: 4rem;
+  font-weight: bold;
   color: #fff;
+}
+
+header .sign {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+}
+
+header .sign ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .sign ul li {
+  margin: auto;
 }
 
 main {
@@ -171,7 +207,9 @@ article {
   display: flex;
 }
 
-article div {
+article .male,
+article .female {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,13 +220,16 @@ article div {
   width: 46%;
   margin: 0 auto;
   border-radius: .35rem;
-  background-image: linear-gradient(135deg, #171746, #224);
+  background-color: #224;
+  color: #fff;
 }
 
-article div .icon {
-  position: relative;
-  margin-top: 20px;
-  margin-left: -20px;
+article .male .icon,
+article .female .icon {
+  position: absolute;
+  z-index: 1;
+  top: 250px;
+  left: -20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,10 +242,49 @@ article div .icon {
   width: 64px;
   height: 64px;
   font-size: 2.5rem;
+  border-radius: .35rem;
   background: -webkit-gradient(linear, left bottom, left top, from(#6af), to(#6df));
   background: linear-gradient(to top, #6af, #6df);
   -webkit-box-shadow: #113 -5px 15px 35px;
           box-shadow: #113 -5px 15px 35px;
+}
+
+article .male .card_img,
+article .female .card_img {
+  position: relative;
+  width: 100%;
+  max-height: 250px;
+  overflow: hidden;
+  padding: 0.25rem;
+}
+
+article .male .card_img:before,
+article .female .card_img:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #224), to(transparent));
+  background: linear-gradient(to top, #224 5%, transparent);
+}
+
+article .male .card_img img,
+article .female .card_img img {
+  width: 100%;
+  border-top-right-radius: .35rem;
+  border-top-left-radius: .35rem;
+}
+
+article .male .card_content,
+article .female .card_content {
+  padding: 1rem;
+}
+
+article .male .card_content h2,
+article .female .card_content h2 {
+  padding-left: 3rem;
 }
 
 article .female .icon {
