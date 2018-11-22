@@ -1,9 +1,12 @@
 $bg: #113;
-$bg_image: linear-gradient(90deg, $bg, #224);
+$bg_dark: #224;
 $mediumseagreen: linear-gradient(to top, #0a7c4e, #0d9);
-$pink: linear-gradient(to top, #f4a, #f6d);
-$lightblue: linear-gradient(to top, #6af, #6df);
+$pink_b: #f4a;
+$pink_t: #f6d;
+$blue_b: #6af;
+$blue_t: #6df;
 $color: #fff;
+$rem: 1rem;
 
 *,
 ::after,
@@ -36,7 +39,7 @@ body {
     -ms-hyphens: manual;
     font-size: 62.5%;
     background-color: $bg;
-    background-image: $bg_image;
+    background-image: linear-gradient(90deg, $bg, $bg_dark);;
     background-position: 0 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -44,7 +47,7 @@ body {
 
 %font {
     font-family: 'Releway', sans-serif;
-    font-size: 1rem;
+    font-size: $rem;
     font-weight: 400;
 }
 
@@ -70,7 +73,7 @@ a {
 
 .color_line {
     width: 50%;
-    margin: 1rem 0;
+    margin: $rem 0;
     height: 1px;
     background: $lightblue;
 }
@@ -97,7 +100,7 @@ ul {
             width: 2.5rem;
             height: 2.5rem;
             transition: .2s ease-in-out;
-            font-size: 2rem;
+            font-size: $rem * 2;
             border-radius: 50%;
             border: 1px dashed $color;
 
@@ -117,7 +120,7 @@ header {
 
     h1 {
         @extend %font;
-        font-size: 4rem;
+        font-size: $rem + 3;
         color: $color;
     }
 }
@@ -130,7 +133,7 @@ main {
 
     article,
     aside {
-        padding: 1rem;
+        padding: $rem;
     }
 }
 
@@ -139,10 +142,30 @@ article {
     order: 1;
     display: flex;
     div {
-        width: 49%;
+        display: flex;
+        flex-direction: column;
+        width: 46%;
         margin: 0 auto;
         border-radius: .35rem;
-        background: rgba(17, 17, 51,.45);
+        background-color: $blue_b;
+        .icon {
+            position: relative;
+            margin-top: 20px;
+            margin-left: -20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 64px;
+            height: 64px;
+            font-size: 2.5rem;
+            background: linear-gradient(to top, $blue_b, $blue_t);
+            box-shadow: $bg -5px 15px 35px;
+        }
+    }
+    .female {
+        .icon {
+            background-image: linear-gradient(to top, $pink_b, $pink_t);
+        }
     }
 }
 
