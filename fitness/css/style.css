@@ -127,7 +127,7 @@ ul.social li {
   border: 1px dashed #fff;
 }
 
-ul.social li:hover, ul.social li.active {
+ul.social li:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   border: 0;
@@ -179,7 +179,7 @@ header .sign ul {
 }
 
 header .sign ul li {
-  margin: auto;
+  margin: auto .5rem;
 }
 
 main {
@@ -239,6 +239,10 @@ article .female .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -247,12 +251,19 @@ article .female .icon {
           align-items: center;
   width: 64px;
   height: 64px;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   border-radius: .35rem;
   background: -webkit-gradient(linear, left bottom, left top, from(#6af), to(#6df));
   background: linear-gradient(to top, #6af, #6df);
   -webkit-box-shadow: #113 -5px 15px 35px;
           box-shadow: #113 -5px 15px 35px;
+}
+
+article .male .icon span,
+article .female .icon span {
+  margin-top: 0.5rem;
+  font-size: 0.66667rem;
+  font-weight: 500;
 }
 
 article .male .card_img,
@@ -275,8 +286,8 @@ article .female .card_img:before {
   bottom: 0;
   left: 0;
   content: '';
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #224), to(transparent));
-  background: linear-gradient(to top, #224 5%, transparent);
+  background: -webkit-gradient(linear, left bottom, left top, from(#224), to(transparent));
+  background: linear-gradient(to top, #224, transparent);
 }
 
 article .male .card_img img,
@@ -292,6 +303,72 @@ article .female .card_content {
 article .male .card_content h2,
 article .female .card_content h2 {
   padding-left: 3rem;
+}
+
+article .male .card_content ul,
+article .female .card_content ul {
+  margin-top: 0.5rem;
+}
+
+article .male .card_content ul li,
+article .female .card_content ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 25px;
+  border-bottom: 1px solid #2b2b80;
+}
+
+article .male .card_content ul li:hover,
+article .female .card_content ul li:hover {
+  background: #224;
+}
+
+article .male .card_content ul li:before,
+article .female .card_content ul li:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  font-family: "FontAwesome";
+  content: "\f00c";
+  color: #0d9;
+  -webkit-filter: drop-shadow(rgba(0, 221, 153, 0.7) 1px 1px 3px);
+          filter: drop-shadow(rgba(0, 221, 153, 0.7) 1px 1px 3px);
+}
+
+article .male .card_content ul li span i,
+article .female .card_content ul li span i {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#0a7c4e), to(#0d9));
+  background-image: linear-gradient(to top, #0a7c4e, #0d9);
+  -webkit-box-shadow: 0 0 0 3px #224, 0 0 0 4px #0d9, 0px 0px 32px #0a7c4e;
+          box-shadow: 0 0 0 3px #224, 0 0 0 4px #0d9, 0px 0px 32px #0a7c4e;
+}
+
+article .male .card_content ul li span i:hover,
+article .female .card_content ul li span i:hover {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 article .female .icon {
