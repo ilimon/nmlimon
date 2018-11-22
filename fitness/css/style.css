@@ -36,9 +36,8 @@ body {
   -ms-hyphens: manual;
   font-size: 62.5%;
   background-color: #113;
-  background-image: -webkit-gradient(linear, left top, right top, from(#113), to(#224));
-  background-image: linear-gradient(90deg, #113, #224);
-  background-position: 0 100%;
+  background-image: url(/fitness/src/bg_image.png), -webkit-gradient(linear, left top, right top, from(#113), to(#224));
+  background-image: url(/fitness/src/bg_image.png), linear-gradient(90deg, #113, #224);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -150,6 +149,11 @@ header {
   padding-right: 1rem;
 }
 
+header svg {
+  -webkit-transform: rotate(-20deg) translateX(1rem);
+          transform: rotate(-20deg) translateX(1rem);
+}
+
 header h1 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 70%;
@@ -219,9 +223,11 @@ article .female {
           flex-direction: column;
   width: 46%;
   margin: 0 auto;
+  color: #fff;
   border-radius: .35rem;
   background-color: #224;
-  color: #fff;
+  -webkit-box-shadow: #113 0 0 42px;
+          box-shadow: #113 0 0 42px;
 }
 
 article .male .icon,
@@ -253,9 +259,12 @@ article .male .card_img,
 article .female .card_img {
   position: relative;
   width: 100%;
-  max-height: 250px;
+  height: 250px;
   overflow: hidden;
-  padding: 0.25rem;
+  border-top-right-radius: .35rem;
+  border-top-left-radius: .35rem;
+  -webkit-box-shadow: inset 0 0 150px #6af;
+          box-shadow: inset 0 0 150px #6af;
 }
 
 article .male .card_img:before,
@@ -273,8 +282,6 @@ article .female .card_img:before {
 article .male .card_img img,
 article .female .card_img img {
   width: 100%;
-  border-top-right-radius: .35rem;
-  border-top-left-radius: .35rem;
 }
 
 article .male .card_content,
