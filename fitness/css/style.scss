@@ -39,8 +39,7 @@ body {
     -ms-hyphens: manual;
     font-size: 62.5%;
     background-color: $bg;
-    background-image: linear-gradient(90deg, $bg, $bg_dark);
-    background-position: 0 100%;
+    background-image: url(/fitness/src/bg_image.png), linear-gradient(90deg, $bg, $bg_dark);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -130,6 +129,10 @@ header {
     padding-left: $rem * 3;
     padding-right: $rem;
 
+    svg {
+        transform: rotate(-20deg) translateX(1rem);
+    }
+
     h1 {
         flex: 0 1 70%;
         padding-left: $rem;
@@ -177,9 +180,10 @@ article {
         flex-direction: column;
         width: 46%;
         margin: 0 auto;
+        color: $color;
         border-radius: .35rem;
         background-color: $bg_dark;
-        color: $color;
+        box-shadow: $bg 0 0 42px;
 
         .icon {
             position: absolute;
@@ -200,9 +204,11 @@ article {
         .card_img {
             position: relative;
             width: 100%;
-            max-height: 250px;
+            height: 250px;
             overflow: hidden;
-            padding: $rem / 4;
+            border-top-right-radius: .35rem;
+            border-top-left-radius: .35rem;
+            box-shadow: inset 0 0 150px $blue_b;
 
             &:before {
                 position: absolute;
@@ -216,8 +222,6 @@ article {
 
             img {
                 width: 100%;
-                border-top-right-radius: .35rem;
-                border-top-left-radius: .35rem;
             }
         }
 
