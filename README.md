@@ -9,7 +9,7 @@ Web page for testing and publishing own projects
 | [Black cloud][1] | All your projects are always with you. Wherever you go! |**November**| [GitHub][git1] |
 | [Apricot][2] | Apricot · In any form and anytime. Fresh Apricots |**November**| [GitHub][git2] |
 | [Julia][3] | Детские праздники · Кулинарная студия Юлии Высоцкой |**November**| [GitHub][git3] |
-| [Fitness][4] | Awesome Fitness · World Gym | Fitness and Health |**November**| [GitHub][git4] |
+| [Fitness][4] | Awesome Fitness · World Gym. Fitness and Health |**November**| [GitHub][git4] |
 
 ## 2019
 
