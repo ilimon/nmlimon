@@ -4,18 +4,18 @@ Web page for testing and publishing own projects
 
 ## 2018
 
-| Pages | Description | Month | Repo |
-|---|---|:-:|--:|
-| [Black cloud][1] | All your projects are always with you. Wherever you go! |**November**| [GitHub][git1] |
-| [Apricot][2] | Apricot · In any form and anytime. Fresh Apricots |**November**| [GitHub][git2] |
-| [Julia][3] | Детские праздники · Кулинарная студия Юлии Высоцкой |**November**| [GitHub][git3] |
-| [Fitness][4] | Awesome Fitness · World Gym. Fitness and Health |**November**| [GitHub][git4] |
+| Pages | Description | Layout | Month | Repo |
+|---|---|:-:|:-:|--:|
+| [Black cloud][1] | All your projects are always with you. Wherever you go! | Grid |**November**| [GitHub][git1] |
+| [Apricot][2] | Apricot · In any form and anytime. Fresh Apricots | Flexbox |**November**| [GitHub][git2] |
+| [Julia][3] | Детские праздники · Кулинарная студия Юлии Высоцкой | Flexbox |**November**| [GitHub][git3] |
+| [Fitness][4] | Awesome Fitness · World Gym. Fitness and Health | Flexbox |**November**| [GitHub][git4] |
 
 ## 2019
 
-| Pages | Description | Month | Repo |
-|---|---|:-:|--:|
-|  |  |  |  |
+| Pages | Description | Layout |  Month | Repo |
+|---|---|:-:|:-:|--:|
+|  |  |  |  |  |
 
 ---
 
