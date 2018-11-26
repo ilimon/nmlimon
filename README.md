@@ -10,6 +10,7 @@ Web page for testing and publishing own projects
 | [Apricot][2] | Apricot · In any form and anytime. Fresh Apricots | Flexbox |**November**| [GitHub][git2] |
 | [Julia][3] | Детские праздники · Кулинарная студия Юлии Высоцкой | Flexbox |**November**| [GitHub][git3] |
 | [Fitness][4] | Awesome Fitness · World Gym. Fitness and Health | Flexbox |**November**| [GitHub][git4] |
+| [Bi-2][5] | БИ-2 — Билеты на концерты Би-2 | «Горизонт событий» в Ледовом | Flexbox |**November**| [GitHub][git5] |
 
 ## 2019
 
@@ -31,3 +32,5 @@ design by [Andrej Sharapov][designer]
 [git3]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/julia
 [4]: https://andrejsharapov.github.io/fitness/ "Awesome Fitness · World Gym | Fitness and Health"
 [git4]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/fitness
+[4]: https://andrejsharapov.github.io/bi-2/ "Awesome Fitness · World Gym | Fitness and Health"
+[git4]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/bi-2
