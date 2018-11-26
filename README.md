@@ -10,7 +10,7 @@ Web page for testing and publishing own projects
 | [Apricot][2] | Apricot · In any form and anytime. Fresh Apricots | Flexbox |**November**| [GitHub][git2] |
 | [Julia][3] | Детские праздники · Кулинарная студия Юлии Высоцкой | Flexbox |**November**| [GitHub][git3] |
 | [Fitness][4] | Awesome Fitness · World Gym. Fitness and Health | Flexbox |**November**| [GitHub][git4] |
-| [Bi-2][5] | «Горизонт событий» в Ледовом — Билеты на концерты Би-2 | Flexbox |**November**| [GitHub][git5] |
+| [Bi-2][5] | «Горизонт событий» в Ледовом — Билеты на концерты Би-2 | Grid + Flex |**November**| [GitHub][git5] |
 
 ## 2019
 
