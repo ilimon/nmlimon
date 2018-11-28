@@ -14,7 +14,9 @@ html {
 
 body {
   margin: 0;
+  width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #00004d;
@@ -185,7 +187,7 @@ main {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   -webkit-transform: scale(0);
           transform: scale(0);
   opacity: 0;
