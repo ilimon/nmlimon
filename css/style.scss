@@ -414,6 +414,16 @@ footer {
 
         .arrows {
             top: 65%;
+
+            span {
+                transform: translate(-50%, -50%) rotate(-90deg);
+            }
+
+            &:hover {
+                span {
+                    margin: 0;
+                }
+            }
         }
 
         .slider-content {

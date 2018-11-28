@@ -460,6 +460,13 @@ footer {
   .slider-container .arrows {
     top: 65%;
   }
+  .slider-container .arrows span {
+    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+            transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  .slider-container .arrows:hover span {
+    margin: 0;
+  }
   .slider-container .slider-content {
     width: 95%;
   }
