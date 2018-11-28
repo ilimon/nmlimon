@@ -84,6 +84,12 @@ header .title svg path:nth-child(2) {
   fill: #009de9;
 }
 
+header .github-logo {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+
 header .github-logo svg {
   width: 80px;
   fill: #fff;
