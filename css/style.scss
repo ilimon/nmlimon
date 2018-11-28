@@ -476,3 +476,11 @@ footer {
         }
     }
 }
+
+@media (max-width: 480px) {
+    header {
+        .title {
+            flex-direction: column;
+        }
+    }
+}

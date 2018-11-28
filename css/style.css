@@ -509,4 +509,13 @@ footer {
             transform: translateX(50%);
   }
 }
+
+@media (max-width: 480px) {
+  header .title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 /*# sourceMappingURL=style.css.map */
