@@ -24,17 +24,17 @@ body {
   display: -ms-grid;
   display: grid;
   overflow-x: hidden;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
   -webkit-hyphens: manual;
+  -ms-hyphens: manual;
   hyphens: manual;
   background-color: black;
   background-image: url(/black-cloud/src/bg_body.jpeg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  -ms-hyphens: manual;
-      grid-template-areas: 'header header' 'nav main' 'footer footer';
+      grid-template-areas: "header header" "nav main" "footer footer";
   -ms-grid-rows: 1fr 3.2fr 1fr;
   grid-template-rows: 1fr 3.2fr 1fr;
   -ms-grid-columns: 1fr 4fr;
@@ -57,7 +57,8 @@ header {
   display: grid;
   padding: 0 5rem;
   background-image: url(/black-cloud/src/oblaka2-min.png);
-  background-position: center;
+  background-position: 0 0;
+  background-repeat: no-repeat;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -233,7 +234,8 @@ footer {
   display: grid;
   padding: .25rem 3rem;
   background-image: url(/black-cloud/src/oblaka1-min.png);
-  background-position: center;
+  background-position: 0 0;
+  background-repeat: no-repeat;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -260,6 +262,7 @@ footer .author {
 
 @media (max-width: 991px) {
   body {
+    height: auto;
         grid-template-areas: 'header' 'nav' 'main' 'footer';
     -ms-grid-rows: 23vh 1fr 6fr 23vh;
     grid-template-rows: 23vh 1fr 6fr 23vh;
