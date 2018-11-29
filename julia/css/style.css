@@ -18,26 +18,26 @@ html {
 }
 
 body {
-  font-size: 62.5%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow-x: hidden;
   flex-direction: column;
-  height: 100%;
-  min-height: 100vh;
-  margin: 0;
-  -webkit-hyphens: manual;
-  hyphens: manual;
-  background-color: #08b457;
-  background-image: linear-gradient(45deg, #08b457, #396);
-  -ms-hyphens: manual;
+  justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  font-size: 62.5%;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
+  background-color: #08b457;
+  background-image: linear-gradient(45deg, #08b457, #396);
 }
 
 a, header,
@@ -69,6 +69,8 @@ footer {
 
 header {
   padding: 0 1rem;
+  width: 100%;
+  margin: auto;
   background-image: url(/julia/src/happiness.png);
 }
 
@@ -118,6 +120,7 @@ header h1 {
 }
 
 main {
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,6 +444,8 @@ footer .footer_nav ul li a {
   }
   main aside {
     flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
     order: 0;
