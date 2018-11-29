@@ -33,6 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     min-height: 100vh;
     overflow-x: hidden;
     -webkit-hyphens: manual;
@@ -132,15 +133,19 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        flex: 0 1 70%;
+        align-items: center;
+        flex: 0 1 65%;
     }
 
     svg {
+        height: 64px;
         transform: rotate(-20deg) translateX(1rem);
     }
 
     h1 {
         padding-left: $rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         @extend %font;
         font-size: $rem + 3;
         font-weight: bold;
@@ -148,7 +153,7 @@ header {
     }
 
     .sign {
-        flex: 0 1 30%;
+        flex: 0 1 35%;
 
         ul {
             display: flex;
@@ -162,6 +167,7 @@ header {
 }
 
 main {
+    margin: auto 0;
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -365,7 +371,9 @@ aside {
             transform: rotate(45deg) translate(1rem, 1rem);
         }
         h1 {
+            padding: 0;
             font-size: 3rem;
+            text-align: center;
         }
     }
     main {
@@ -392,6 +400,12 @@ aside {
             }
             .male {
                 margin-bottom: 2rem;
+            }
+        }
+
+        aside {
+            .social {
+                justify-content: center;
             }
         }
     }
