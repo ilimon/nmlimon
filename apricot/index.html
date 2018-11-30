@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
@@ -11,16 +12,18 @@
     <link rel='stylesheet' href='/apricot/css/style.css'>
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <!-- <div class="git_links">
             <a class="github-button" href="https://github.com/andrejsharapov/andrejsharapov.github.io" data-icon="octicon-star" data-show-count="true" aria-label="Star andrejsharapov/andrejsharapov.github.io on GitHub">Star</a> <a class="github-button" href="https://github.com/andrejsharapov" data-show-count="true" aria-label="Follow @andrejsharapov on GitHub">Follow</a>
         </div> -->
-        <svg version="1.1" width="64" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 468.293 468.293" xml:space="preserve">
+        <svg version="1.1" width="64" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0" y="0" viewBox="0 0 468.293 468.293" xml:space="preserve">
             <g>
                 <path d="M287.645,394.524c-19.774,0-37.174-1.819-52.598-5.062
                     C97.106,360.513,124.314,216.244,124.314,216.244s25.785,15.977,71.344,28.158c43.581,11.706,105.275,19.853,179.862,7.356
-                    c25.627-4.271,52.756-10.994,81.151-20.881c2.214-0.712,4.508-1.582,6.802-2.373C474.626,224.47,483.01,394.524,287.645,394.524z"/>
+                    c25.627-4.271,52.756-10.994,81.151-20.881c2.214-0.712,4.508-1.582,6.802-2.373C474.626,224.47,483.01,394.524,287.645,394.524z" />
             </g>
         </svg>
         <h1>Apricot</h1>
@@ -35,7 +38,7 @@
                 <img src="/apricot/src/author.jpg" class="author" alr="">
                 <h2>Andrej Sharapov</h2>
                 <p>UI/UX designer, frontend developer, web-designer, banner-maker</p>
-            </div>            
+            </div>
             <div class="frashes">
                 <div><img src="/apricot/src/tea.jpg" alt=""></div>
                 <div><img src="/apricot/src/cream.jpg" alt=""></div>
@@ -58,14 +61,14 @@
             var currentX = '';
             var currentY = '';
             var movementConstant = .015;
-            $(document).mousemove(function(e) {
-                  if(currentX == '') currentX = e.pageX;
+            $(document).mousemove(function (e) {
+                if (currentX == '') currentX = e.pageX;
                 var xdiff = e.pageX - currentX;
                 currentX = e.pageX;
-                if(currentY == '') currentY = e.pageY;
+                if (currentY == '') currentY = e.pageY;
                 var ydiff = e.pageY - currentY;
-                currentY = e.pageY; 
-                $('.parallax div').each(function(i, el) {
+                currentY = e.pageY;
+                $('.parallax div').each(function (i, el) {
                     var movement = (i + 1) * (xdiff * movementConstant);
                     var movementy = (i + 1) * (ydiff * movementConstant);
                     var newX = $(el).position().left + movement;
@@ -76,6 +79,39 @@
             });
         </script>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script>
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function () {
+                    try {
+                        w.yaCounter51363241 = new Ya.Metrika2({
+                            id: 51363241,
+                            clickmap: true,
+                            trackLinks: true,
+                            accurateTrackBounce: true
+                        });
+                    } catch (e) {}
+                });
+
+                var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () {
+                        n.parentNode.insertBefore(s, n);
+                    };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else {
+                    f();
+                }
+            })(document, window, "yandex_metrika_callbacks2");
+        </script>
+        <noscript>
+            <div><img src="https://mc.yandex.ru/watch/51363241" style="position:absolute; left:-9999px;" alt="" /></div>
+        </noscript>
     </footer>
 </body>
+
 </html>
