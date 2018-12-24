@@ -10,16 +10,16 @@ $shadow: -20px 20px 40px rgba(0, 0, 0, .3);
 html {
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-     -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 body {
     margin: 0;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     font-family: 'Pacifico', sans-serif;
     font-size: 62.5%;
@@ -141,6 +141,8 @@ main {
         padding: 5rem;
         color: #fff;
         background: url(/new_year/src/pattern.png) repeat 0 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 
         .flex {
             display: grid;
@@ -148,6 +150,7 @@ main {
             grid-template-rows: 1fr;
             justify-content: space-around;
             align-items: center;
+
             img {
                 width: 400px;
             }
@@ -181,58 +184,63 @@ main {
         visibility: visible;
         transition: opacity 0.7s, visibility 0s;
 
+        .modal-content {
+            -webkit-overflow-scrolling: touch
+        }
+
         .modal-close {
             opacity: 1;
             visibility: visible;
             transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
         }
     }
+}
 
-    .transition-layer {
-        position: fixed;
-        top: 0;
-        left: 0;
-        overflow: hidden;
-        z-index: 2;
-        width: 100%;
+.transition-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+    .bg-layer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-2%);
+        width: 2500%;
         height: 100%;
-        opacity: 0;
-        visibility: hidden;
+        background: url(/new_year/src/ink.png) no-repeat 0 0;
+        background-size: 100% 100%;
+        filter: brightness(0) invert(1);
+    }
 
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.opening {
         .bg-layer {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateY(-50%) translateX(-2%);
-            width: 2500%;
-            height: 100%;
-            background: url(/new_year/src/ink.png) no-repeat 0 0;
-            background-size: 100% 100%;
-        }
-
-        &.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        &.opening {
-            .bg-layer {
-                animation: sequence .8s steps(24);
-                animation-fill-mode: forwards;
-            }
-        }
-
-        &.closing {
-            .bg-layer {
-                animation: sprite-reverse .8s steps(24);
-                animation-fill-mode: forwards;
-            }
+            animation: sequence .8s steps(24);
+            animation-fill-mode: forwards;
         }
     }
 
-    .no-cssanimations .transition-layer {
-        display: none;
+    &.closing {
+        .bg-layer {
+            animation: sprite-reverse .8s steps(24);
+            animation-fill-mode: forwards;
+        }
     }
+}
+
+.no-cssanimations .transition-layer {
+    display: none;
 }
 
 @keyframes sequence {
