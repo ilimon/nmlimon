@@ -1,0 +1,268 @@
+$bgimg: '/new_year/src/bg_1.jpg';
+$shadow: -20px 20px 40px rgba(0, 0, 0, .3);
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 62.5%;
+    background: url($bgimg) center center no-repeat / cover;
+}
+
+main {
+    position: relative;
+    height: 100%;
+    font-size: 1rem;
+    background-image: url('/new_year/src/snowflake1.png'), url('/new_year/src/snowflake3.png'), url('/new_year/src/snowflake2.png');
+    animation: snow 20s linear infinite;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        content: '';
+        background: linear-gradient(-90deg, rgba(109, 0, 5, .1), rgba(0, 0, 0, .3));
+    }
+
+    .cont {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .title,
+        .btn {
+            padding: 2rem 4rem;
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: 15px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            border-radius: 16px;
+            background-color: #fff;
+            box-shadow: $shadow;
+
+            span {
+                background: url($bgimg) center center no-repeat / cover;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+
+            }
+        }
+
+        .title {
+            pointer-events: none;
+        }
+
+        .btn {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            font-family: inherit;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all .25s ease-in-out;
+            border: 0;
+            background-color: #fff;
+
+            span {
+                background-position: 100% 100%;
+            }
+
+            &::after {
+                position: absolute;
+                right: -80px;
+                bottom: -50px;
+                width: 102px;
+                height: 59px;
+                content: '';
+                filter: brightness(0) invert(1);
+                background-image: url(/new_year/src/click.png);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+@keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #520004, #9c1518);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+
+    .modal-content {
+        height: 100%;
+        padding: 5rem;
+        color: #fff;
+        background: url(/new_year/src/pattern.png) repeat 0 0;
+
+        .flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            justify-content: space-around;
+            align-items: center;
+            img {
+                width: 400px;
+            }
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        overflow: hidden;
+        z-index: 1;
+        text-indent: 100%;
+        width: 45px;
+        height: 45px;
+        filter: brightness(0) invert(1);
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.3) url(/new_year/src/close.svg) no-repeat center center;
+    }
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.7s, visibility 0s;
+
+        .modal-close {
+            opacity: 1;
+            visibility: visible;
+            transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+        }
+    }
+
+    .transition-layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+
+        .bg-layer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-2%);
+            width: 2500%;
+            height: 100%;
+            background: url(/new_year/src/ink.png) no-repeat 0 0;
+            background-size: 100% 100%;
+        }
+
+        &.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &.opening {
+            .bg-layer {
+                animation: sequence .8s steps(24);
+                animation-fill-mode: forwards;
+            }
+        }
+
+        &.closing {
+            .bg-layer {
+                animation: sprite-reverse .8s steps(24);
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+
+    .no-cssanimations .transition-layer {
+        display: none;
+    }
+}
+
+@keyframes sequence {
+    0% {
+        transform: translateY(-50%) translateX(-2%);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(-98%);
+    }
+}
+
+@keyframes sprite-reverse {
+    0% {
+        transform: translateY(-50%) translateX(-98%);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(-2%);
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+}
