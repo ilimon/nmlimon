@@ -17,7 +17,7 @@ html {
 body {
   margin: 0;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   font-family: 'Pacifico', sans-serif;
   font-size: 62.5%;
@@ -165,6 +165,8 @@ main .cont .btn:focus {
   padding: 5rem;
   color: #fff;
   background: url(/new_year/src/pattern.png) repeat 0 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .modal .modal-content .flex {
@@ -215,6 +217,10 @@ main .cont .btn:focus {
   transition: opacity 0.7s, visibility 0s;
 }
 
+.modal.visible .modal-content {
+  -webkit-overflow-scrolling: touch;
+}
+
 .modal.visible .modal-close {
   opacity: 1;
   visibility: visible;
@@ -224,7 +230,7 @@ main .cont .btn:focus {
   transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s, -webkit-transform 0.3s 0s;
 }
 
-.modal .transition-layer {
+.transition-layer {
   position: fixed;
   top: 0;
   left: 0;
@@ -236,7 +242,7 @@ main .cont .btn:focus {
   visibility: hidden;
 }
 
-.modal .transition-layer .bg-layer {
+.transition-layer .bg-layer {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -246,28 +252,30 @@ main .cont .btn:focus {
   height: 100%;
   background: url(/new_year/src/ink.png) no-repeat 0 0;
   background-size: 100% 100%;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 
-.modal .transition-layer.visible {
+.transition-layer.visible {
   opacity: 1;
   visibility: visible;
 }
 
-.modal .transition-layer.opening .bg-layer {
+.transition-layer.opening .bg-layer {
   -webkit-animation: sequence 0.8s steps(24);
           animation: sequence 0.8s steps(24);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.modal .transition-layer.closing .bg-layer {
+.transition-layer.closing .bg-layer {
   -webkit-animation: sprite-reverse 0.8s steps(24);
           animation: sprite-reverse 0.8s steps(24);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.modal .no-cssanimations .transition-layer {
+.no-cssanimations .transition-layer {
   display: none;
 }
 
