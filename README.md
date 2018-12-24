@@ -11,7 +11,7 @@ Web page for testing and publishing own projects
 | [Julia][3] | Детские праздники · Кулинарная студия Юлии Высоцкой | Flexbox |**November**| [GitHub][git3] |
 | [Fitness][4] | Awesome Fitness · World Gym. Fitness and Health | Flexbox |**November**| [GitHub][git4] |
 | [Bi-2][5] | «Горизонт событий» в Ледовом — Билеты на концерты Би-2 | Grid + Flex |**November**| [GitHub][git5] |
-| [New Year][6] | New Year - Новогодняя открытка веб-разработчикам | Flex |**December**| [GitHub][git6] |
+| [New Year][6] | New Year - Новогодняя открытка веб-разработчикам | Flexbox |**December**| [GitHub][git6] |
 
 ## 2019
 
