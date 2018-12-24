@@ -11,6 +11,7 @@ Web page for testing and publishing own projects
 | [Julia][3] | Детские праздники · Кулинарная студия Юлии Высоцкой | Flexbox |**November**| [GitHub][git3] |
 | [Fitness][4] | Awesome Fitness · World Gym. Fitness and Health | Flexbox |**November**| [GitHub][git4] |
 | [Bi-2][5] | «Горизонт событий» в Ледовом — Билеты на концерты Би-2 | Grid + Flex |**November**| [GitHub][git5] |
+| [New Year][6] | New Year - Новогодняя открытка с поздравлениями разработчикам | Flex |**December**| [GitHub][git6] |
 
 ## 2019
 
@@ -34,3 +35,5 @@ design by [Andrej Sharapov][designer]
 [git4]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/fitness
 [5]: https://andrejsharapov.github.io/bi-2/ "Awesome Fitness · World Gym | Fitness and Health"
 [git5]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/bi-2
+[6]: https://andrejsharapov.github.io/bi-2/ "New Year - Новогодняя открытка"
+[git6]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/new_year
