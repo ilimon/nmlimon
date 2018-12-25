@@ -17,7 +17,7 @@ Web page for testing and publishing own projects
 
 | Pages | Description | Layout |  Month | Repo |
 |---|---|:-:|:-:|--:|
-| [Christmas][7] | Christmas Card - Happy New Year and Merry Christmas | Grid + Flex |**December**| [GitHub][git7] |
+| [BoxShadowsCSS][7] | A cross-browser collection of CSS box-shadows | Grid + Flex |**December**| [GitHub][git7] |
 |  |  |  |  |  |
 
 ---
