@@ -17,7 +17,7 @@ Web page for testing and publishing own projects
 
 | Pages | Description | Layout |  Month | Repo |
 |---|---|:-:|:-:|--:|
-| [BoxShadowsCSS][7] | A cross-browser collection of CSS box-shadows | Grid + Flex |**December**| [GitHub][git7] |
+| [Box-Shadows.CSS][7] | A cross-browser collection of CSS box-shadows | Grid + Flex |**January**| [GitHub][git7] |
 |  |  |  |  |  |
 
 ---
