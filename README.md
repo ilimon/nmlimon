@@ -17,6 +17,7 @@ Web page for testing and publishing own projects
 
 | Pages | Description | Layout |  Month | Repo |
 |---|---|:-:|:-:|--:|
+| [Christmas][7] | Christmas Card - Happy New Year and Merry Christmas | Grid + Flex |**December**| [GitHub][git7] |
 |  |  |  |  |  |
 
 ---
@@ -37,3 +38,5 @@ design by [Andrej Sharapov][designer]
 [git5]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/bi-2
 [6]: https://andrejsharapov.github.io/new_year/ "New Year - Новогодняя открытка"
 [git6]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/new_year
+[7]: https://madeas.github.io/box-shadows/ "A cross-browser collection of CSS box-shadows"
+[git7]: https://github.com/madeas/box-shadows.css
