@@ -70,7 +70,7 @@ main .cont {
 main .cont .title,
 main .cont .btn {
   padding: 2rem 4rem;
-  font-size: 4rem;
+  font-size: 4vw;
   font-weight: 900;
   letter-spacing: 15px;
   text-transform: uppercase;
@@ -98,7 +98,7 @@ main .cont .btn {
   display: block;
   text-decoration: none;
   font-family: inherit;
-  font-size: 2rem;
+  font-size: 2vw;
   cursor: pointer;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
@@ -162,7 +162,7 @@ main .cont .btn:focus {
 
 .modal .modal-content {
   height: 100%;
-  padding: 5rem;
+  padding: 1vw;
   color: #fff;
   background: url(/new_year/src/pattern.png) repeat 0 0;
   -webkit-font-smoothing: antialiased;
@@ -172,8 +172,9 @@ main .cont .btn:focus {
 .modal .modal-content .flex {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  height: 100%;
+  -ms-grid-columns: 40% 1fr;
+      grid-template-columns: 40% 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   -ms-flex-pack: distribute;
@@ -184,15 +185,15 @@ main .cont .btn:focus {
 }
 
 .modal .modal-content .flex img {
-  width: 400px;
+  width: 80%;
 }
 
 .modal .modal-content h2 {
-  font-size: 3rem;
+  font-size: 3.5vw;
 }
 
 .modal .modal-content p {
-  font-size: 1.5rem;
+  font-size: 2.5vw;
 }
 
 .modal .modal-close {
