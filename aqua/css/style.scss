@@ -35,27 +35,9 @@ body {
         overflow: hidden;
         content: '';
         background-image: url(/aqua/src/bg_home.jpg);
+        background-position: center center;
         background-size: cover;
         animation: bgbody 60s ease-in-out infinite;
-    }
-}
-
-@keyframes bgbody {
-    0% {
-        background-image: url(/aqua/src/bg_home.jpg);
-    }
-
-    20%,
-    60% {
-        background-image: url(/aqua/src/bg_3.jpg);
-    }
-
-    40% {
-        background-image: url(/aqua/src/bg_2.jpg);
-    }
-
-    80% {
-        background-image: url(/aqua/src/bg_4.jpg);
     }
 }
 
@@ -73,13 +55,13 @@ header {
 
         svg {
             margin-right: 20px;
-            width: 64px;
+            width: 48px;
             transform: rotate(-45deg);
 
             path {
                 fill: none;
                 stroke: $color;
-                stroke-width: 10;
+                stroke-width: 12;
                 stroke-dasharray: 3500;
                 stroke-dashoffset: 4000;
                 animation: dash 2s linear forwards;
@@ -140,35 +122,6 @@ header {
                 }
             }
         }
-    }
-}
-
-@keyframes dash {
-    50% {
-        stroke-dashoffset: 100%;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes pulse {
-
-    0%,
-    20%,
-    40%,
-    60%,
-    80% {
-        transform: scale(1.1) rotate(-45deg);
-    }
-
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        transform: scale(1) rotate(-45deg);
     }
 }
 
@@ -242,6 +195,11 @@ main {
         border-radius: 10px;
         background: linear-gradient(135deg, rgba($color, 0.1), rgba($primary, 0.5));
 
+        .group {
+            display: flex;
+            flex-direction: column;
+        }
+
         h3,
         input[type="button"] {
             text-transform: uppercase;
@@ -249,6 +207,7 @@ main {
 
         input[type="text"],
         input[type="button"] {
+            width: 100%;
             border-radius: 0.5em;
 
             &:focus {
@@ -272,7 +231,7 @@ main {
             }
         }
 
-        label {
+        label#btn {
             position: relative;
 
             &::before {
@@ -306,18 +265,6 @@ main {
             background: linear-gradient(90deg, rgba($color, 0.2), rgba($primary, 0.8));
             box-shadow: 0px 2px 5px $primary;
         }
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
     }
 }
 
@@ -391,6 +338,7 @@ main {
         justify-content: center;
 
         span {
+            position: relative;
             margin: 0 .25em;
             display: flex;
             width: 32px;
@@ -403,6 +351,7 @@ main {
             &:hover,
             &.active {
                 &::before {
+                    position: absolute;
                     width: 22px;
                     height: 22px;
                     content: '';
@@ -416,6 +365,9 @@ main {
 }
 
 .side {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
     transition: 200ms ease-in-out;
     color: $color;
     font-size: 1rem;
@@ -427,7 +379,6 @@ main {
 
     .nav {
         display: flex;
-        height: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -454,4 +405,207 @@ footer {
     font-family: $footer-font;
     font-size: 1rem;
     color: $color;
+}
+
+@keyframes bgbody {
+    0%,
+    10%,
+    100% {
+        background-image: url(/aqua/src/bg_home.jpg);
+    }
+
+    20%,
+    30% {
+        background-image: url(/aqua/src/bg_3.jpg);
+    }
+
+    40%,
+    50% {
+        background-image: url(/aqua/src/bg_2.jpg);
+    }
+
+    60%,
+    70% {
+        background-image: url(/aqua/src/bg_4.jpg);
+    }
+
+    80%,
+    90% {
+        background-image: url(/aqua/src/bg_3.jpg);
+    }
+}
+
+@keyframes dash {
+    50% {
+        stroke-dashoffset: 100%;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale(1) rotate(-45deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1024px) {
+    #bubbles {
+        display: none;
+    }
+    .headline {
+        h1 {
+            font-size: 6rem;
+
+            span {
+                margin-left: 0 !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .headline {
+        flex-direction: column;
+
+        h1 {
+            width: 100%;
+            flex-flow: row wrap;
+            font-size: 3rem;
+            text-shadow: 10px -5px rgba($primary, 0.3);
+
+            span {
+                margin-left: 7px !important;
+                display: inline-block;
+            }
+        }
+
+        form {
+            width: 100%;
+            justify-content: center;
+
+            .group {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 1em;
+
+                label {
+                    width: 48%;
+                }
+            }
+        }
+    }
+
+    .slider {
+        width: 100%;
+
+        .arrows {
+            justify-content: space-between;
+        }
+    }    
+}
+
+@media (max-width: 768px) {
+    body {
+        &::before {
+            animation: none;
+        }
+    }
+
+    header {
+        .logo {
+            svg {
+                width: 32px;
+
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    .slider {
+        .dots {
+            span {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            content:'';
+            background-color: rgba($primary, .4);
+        }
+    }
+    header {
+        .logo {
+            h2 {
+                display: none;
+            }
+        }
+    }
+    .headline {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        form {
+            padding: 0.5em;
+
+            .group {
+                flex-direction: column;
+
+                label {
+                    width: 100%;
+                }
+            }
+
+            input[type="text"],
+            input[type="button"] {
+                padding: 0.75em;
+                min-height: 2em;
+            }
+        }
+    }
+    .slider {
+        padding-bottom: 0;
+    }
 }
