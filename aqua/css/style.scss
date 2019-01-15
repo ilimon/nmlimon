@@ -150,7 +150,7 @@ main {
     padding: 1em 4em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .headline {
@@ -605,7 +605,18 @@ footer {
             }
         }
     }
+    .container {
+        padding: 15px;
+    }
     .slider {
         padding-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        .arrows {
+            display: none;
+        }
     }
 }
