@@ -10,6 +10,7 @@ body {
   overflow: hidden;
   display: -ms-grid;
   display: grid;
+  width: 100vw;
   height: 100vh;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
@@ -82,7 +83,7 @@ header .social ul li {
   width: 32px;
   height: 32px;
   font-size: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
 }
 
@@ -175,16 +176,19 @@ main #bubbles {
       -ms-flex-align: start;
           align-items: flex-start;
   font-family: "Karla", sans-serif;
-  font-size: 8vw;
+  font-size: 7rem;
   color: #e6e6e6;
   text-shadow: 40px 10px rgba(0, 58, 150, 0.3);
 }
 
 .headline h1 span {
   display: block;
-  margin-left: 10%;
   -webkit-animation: fadeIn 1s linear forwards;
           animation: fadeIn 1s linear forwards;
+}
+
+.headline h1 span:nth-child(2) {
+  margin-left: 10%;
 }
 
 .headline h1 span:last-child {
@@ -299,12 +303,14 @@ main #bubbles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 15%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .slider .dots span {
+  margin: 0 .25em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,6 +338,9 @@ main #bubbles {
 .side {
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
+  color: #e6e6e6;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .side:hover {
@@ -359,7 +368,7 @@ main #bubbles {
 
 .side .nav span {
   margin: 2px;
-  width: 60px;
+  width: 45px;
   height: 4px;
   background-color: #e6e6e6;
 }
