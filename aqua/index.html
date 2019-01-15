@@ -108,9 +108,15 @@
                 <h1><span>This</span> <span>Beautiful</span> <span>World</span></h1>
                 <form>
                     <h3>Buy a ticket to the aquarium</h3>
-                    <input type="text" name="name" id="" placeholder="@andrejsharapov">
-                    <input type="text" name="mail" id="" placeholder="Your Email">
-                    <label for="ticket">
+                    <div class="group">
+                        <label for="name">
+                            <input type="text" name="name" id="" placeholder="@andrejsharapov">
+                        </label>
+                        <label for="mail">
+                            <input type="text" name="mail" id="" placeholder="Your Email">
+                        </label>
+                    </div>
+                    <label for="ticket" id="btn">
                         <input type="button" name="ticket" value="Buy a ticket">
                     </label>
                 </form>
@@ -144,7 +150,7 @@
         <div class="author">
             by Andrej Sharapov
         </div>
-        <script>
+        <!-- <script>
             // canvas
 
             var c = document.getElementById('bubbles'),
@@ -210,7 +216,7 @@
             }
             resizeCanvas();
             window.addEventListener('resize', resizeCanvas, false);
-        </script>
+        </script> -->
     </footer>
 </body>
 
