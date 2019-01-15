@@ -1,0 +1,290 @@
+$body-font: "Karla",
+sans-serif;
+$footer-font: "Yeseva One",
+cursive;
+$primary: #003a96;
+$color: #e6e6e6;
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header""main main""footer footer";
+    font-family: $body-font;
+    font-size: 62.5%;
+    background-color: $primary;
+    background-image: url(/aqua/src/bg_home.jpg);
+    background-size: cover;
+}
+
+header {
+    grid-area: header;
+
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        svg {
+            width: 64px;
+            transform: rotate(-45deg);
+
+            path {
+                fill: none;
+                stroke: $color;
+                stroke-width: 10;
+                stroke-dasharray: 3500;
+                stroke-dashoffset: 4000;
+                animation: dash 2s linear forwards;
+            }
+        }
+    }
+
+    .social {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            li {
+                margin: 0 7px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+
+                a {
+                    transition: 200ms ease;
+                    color: $color;
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.5);
+
+                    a {
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes dash {
+    50% {
+        stroke-dashoffset: 100%;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+main {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(50px, auto);
+    grid-template-rows: 1fr;
+    grid-template-areas: "cont""aside";
+    grid-gap: 10px;
+
+    #bubbles {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -1;
+    }
+}
+
+.container {
+    grid-area: cont;
+
+    position: relative;
+    padding: 1em 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.headline {
+    h1 {
+        position: relative;
+        margin: 0;
+        display: flex;
+        width: 50%;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        font-family: $body-font;
+        font-size: 8vw;
+        color: $color;
+        text-shadow: 40px 10px rgba($primary, 0.3);
+
+        span {
+            display: block;
+            margin-left: 10%;
+            animation: fadeIn 1s linear forwards;
+
+            &:last-child {
+                margin-left: 55%;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.slider {
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+
+    .arrows {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        .arrow {
+            position: relative;
+            display: flex;
+            width: 48px;
+            height: 48px;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            color: $color;
+
+
+            &::before,
+            &::after {
+                position: absolute;
+                display: block;
+                content: '';
+                border-radius: inherit;
+            }
+
+            &::before {
+                top: -5px;
+                left: -5px;
+                width: 56px;
+                height: 56px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            &::after {
+                top: -8px;
+                left: -8px;
+                width: 62px;
+                height: 62px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            &:active {
+                background-color: $color;
+                color: $primary;
+            }
+        }
+
+    }
+
+    .dots {
+        display: flex;
+        width: 15%;
+        justify-content: space-around;
+
+        span {
+            display: flex;
+            width: 32px;
+            height: 32px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+
+            &:hover,
+            &.active {
+                &::before {
+                    width: 22px;
+                    height: 22px;
+                    content: '';
+                    cursor: pointer;
+                    border-radius: inherit;
+                    background-color: $color;
+                }
+            }
+        }
+    }
+}
+
+.side {
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(90deg);
+
+        span {
+            margin: 2px;
+            width: 60px;
+            height: 4px;
+            background-color: $color;
+        }
+    }
+}
+
+
+footer {
+    grid-area: footer;
+
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: $footer-font;
+    font-size: 1rem;
+    color: $color;
+}
