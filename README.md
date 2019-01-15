@@ -18,6 +18,7 @@ Web page for testing and publishing own projects
 | Pages | Description | Layout |  Month | Repo |
 |---|---|:-:|:-:|--:|
 | [Box-Shadows.CSS][7] | A cross-browser collection of CSS box-shadows | Grid + Flex |**January**| [GitHub][git7] |
+| [Underwater world][8] | Underwater world - is so amazing and versatile | Grid + Flex |**January**| [GitHub][git8] |
 |  |  |  |  |  |
 
 ---
@@ -40,3 +41,5 @@ design by [Andrej Sharapov][designer]
 [git6]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/new_year
 [7]: https://madeas.github.io/box-shadows/ "A cross-browser collection of CSS box-shadows"
 [git7]: https://github.com/madeas/box-shadows.css
+[8]: https://andrejsharapov.github.io/aqua/ "Underwater world - is so amazing and versatile"
+[git8]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/aqua
