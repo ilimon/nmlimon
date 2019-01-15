@@ -6,6 +6,7 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   overflow: hidden;
   display: -ms-grid;
@@ -20,8 +21,52 @@ body {
   font-family: "Karla", sans-serif;
   font-size: 62.5%;
   background-color: #003a96;
+}
+
+body::before {
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  content: '';
   background-image: url(/aqua/src/bg_home.jpg);
   background-size: cover;
+  -webkit-animation: bgbody 60s ease-in-out infinite;
+          animation: bgbody 60s ease-in-out infinite;
+}
+
+@-webkit-keyframes bgbody {
+  0% {
+    background-image: url(/aqua/src/bg_home.jpg);
+  }
+  20%,
+  60% {
+    background-image: url(/aqua/src/bg_3.jpg);
+  }
+  40% {
+    background-image: url(/aqua/src/bg_2.jpg);
+  }
+  80% {
+    background-image: url(/aqua/src/bg_4.jpg);
+  }
+}
+
+@keyframes bgbody {
+  0% {
+    background-image: url(/aqua/src/bg_home.jpg);
+  }
+  20%,
+  60% {
+    background-image: url(/aqua/src/bg_3.jpg);
+  }
+  40% {
+    background-image: url(/aqua/src/bg_2.jpg);
+  }
+  80% {
+    background-image: url(/aqua/src/bg_4.jpg);
+  }
 }
 
 header {
@@ -205,7 +250,7 @@ main {
 
 main #bubbles {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   z-index: -1;
@@ -224,6 +269,18 @@ main #bubbles {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -261,6 +318,103 @@ main #bubbles {
 
 .headline h1 span:last-child {
   margin-left: 55%;
+}
+
+.headline form {
+  padding: 2em;
+  padding-bottom: 4em;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1rem;
+  color: #e6e6e6;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(230, 230, 230, 0.1), rgba(0, 58, 150, 0.5));
+}
+
+.headline form h3,
+.headline form input[type="button"] {
+  text-transform: uppercase;
+}
+
+.headline form input[type="text"],
+.headline form input[type="button"] {
+  border-radius: 0.5em;
+}
+
+.headline form input[type="text"]:focus,
+.headline form input[type="button"]:focus {
+  outline: none;
+}
+
+.headline form input[type="text"] {
+  margin-bottom: 1.25em;
+  padding: 1em 3em;
+  padding-left: 0.5em;
+  min-height: 3em;
+  font-size: 1rem;
+  color: #e6e6e6;
+  border: 3px solid rgba(230, 230, 230, 0.4);
+  background-color: rgba(230, 230, 230, 0.2);
+  -webkit-box-shadow: inset -1px 0px 5px #003a96;
+          box-shadow: inset -1px 0px 5px #003a96;
+}
+
+.headline form input[type="text"]::-webkit-input-placeholder {
+  color: rgba(230, 230, 230, 0.7);
+}
+
+.headline form input[type="text"]:-ms-input-placeholder {
+  color: rgba(230, 230, 230, 0.7);
+}
+
+.headline form input[type="text"]::-ms-input-placeholder {
+  color: rgba(230, 230, 230, 0.7);
+}
+
+.headline form input[type="text"]::placeholder {
+  color: rgba(230, 230, 230, 0.7);
+}
+
+.headline form label {
+  position: relative;
+}
+
+.headline form label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 00%;
+  height: 100%;
+  content: '';
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  border-radius: 0.5em;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(230, 230, 230, 0.8)), to(rgba(0, 58, 150, 0.1)));
+  background: linear-gradient(90deg, rgba(230, 230, 230, 0.8), rgba(0, 58, 150, 0.1));
+}
+
+.headline form label:hover:before {
+  width: 100%;
+}
+
+.headline form input[type="button"] {
+  width: 100%;
+  min-height: 3em;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #e6e6e6;
+  border: 1px solid rgba(230, 230, 230, 0.4);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(230, 230, 230, 0.2)), to(rgba(0, 58, 150, 0.8)));
+  background: linear-gradient(90deg, rgba(230, 230, 230, 0.2), rgba(0, 58, 150, 0.8));
+  -webkit-box-shadow: 0px 2px 5px #003a96;
+          box-shadow: 0px 2px 5px #003a96;
 }
 
 @-webkit-keyframes fadeIn {
@@ -432,6 +586,7 @@ main #bubbles {
           align-items: center;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+  cursor: pointer;
 }
 
 .side .nav span {
