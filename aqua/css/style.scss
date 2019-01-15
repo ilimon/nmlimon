@@ -36,7 +36,10 @@ header {
     align-items: center;
 
     .logo {
+        display: flex;
+        align-items: center;
         svg {
+            margin-right: 20px;
             width: 64px;
             transform: rotate(-45deg);
 
@@ -48,6 +51,16 @@ header {
                 stroke-dashoffset: 4000;
                 animation: dash 2s linear forwards;
             }
+
+            &:hover {
+                animation: pulse 5s ease-in-out infinite;
+            }
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: normal;
+            color: $color;
         }
     }
 
@@ -60,15 +73,29 @@ header {
             align-items: center;
 
             li {
+                position: relative;
                 margin: 0 7px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 32px;
                 height: 32px;
-                font-size: 1rem;
-                border: 1px solid rgba(255, 255, 255, 0.3);
+                font-size: 1.25rem;
+                border: 1px solid rgba(255, 255, 255, 0.4);
                 border-radius: 50%;
+                
+                &::before {
+                    position: absolute;
+                    top: -3px;
+                    left: -3px;
+                    z-index: -1;
+                    display: block;
+                    width: 36px;
+                    height: 36px;
+                    content: '';
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    border-radius: inherit;
+                }
 
                 a {
                     transition: 200ms ease;
@@ -76,11 +103,7 @@ header {
                 }
 
                 &:hover {
-                    background-color: rgba(255, 255, 255, 0.5);
-
-                    a {
-                        transform: scale(1.5);
-                    }
+                    background-color: rgba($primary, 0.5);
                 }
             }
         }
@@ -93,6 +116,23 @@ header {
     }
     100% {
         stroke-dashoffset: 0;
+    }
+}
+
+@keyframes pulse {
+    0%,
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale(1) rotate(-45deg);
     }
 }
 
@@ -216,7 +256,7 @@ main {
 
             &:hover {
                 cursor: pointer;
-                background-color: rgba(255, 255, 255, 0.3);
+                background-color: rgba($primary, 0.3);
             }
 
             &:active {
