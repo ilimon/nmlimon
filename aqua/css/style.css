@@ -182,9 +182,8 @@ main #bubbles {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .headline {
@@ -765,8 +764,17 @@ footer {
     padding: 0.75em;
     min-height: 2em;
   }
+  .container {
+    padding: 15px;
+  }
   .slider {
     padding-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider .arrows {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
