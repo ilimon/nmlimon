@@ -650,9 +650,6 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  #bubbles {
-    display: none;
-  }
   .headline h1 {
     font-size: 6rem;
   }
@@ -714,6 +711,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #bubbles {
+    display: none;
+  }
   body::before {
     -webkit-animation: none;
             animation: none;
