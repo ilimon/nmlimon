@@ -15,6 +15,7 @@ body {
     margin: 0;
     overflow: hidden;
     display: grid;
+    width: 100vw;
     height: 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
@@ -66,7 +67,7 @@ header {
                 width: 32px;
                 height: 32px;
                 font-size: 1rem;
-                border: 1px solid rgba(255, 255, 255, 0.5);
+                border: 1px solid rgba(255, 255, 255, 0.3);
                 border-radius: 50%;
 
                 a {
@@ -132,14 +133,17 @@ main {
         flex-flow: column wrap;
         align-items: flex-start;
         font-family: $body-font;
-        font-size: 8vw;
+        font-size: 7rem;
         color: $color;
         text-shadow: 40px 10px rgba($primary, 0.3);
 
         span {
             display: block;
-            margin-left: 10%;
             animation: fadeIn 1s linear forwards;
+
+            &:nth-child(2) {
+                margin-left: 10%;
+            }
 
             &:last-child {
                 margin-left: 55%;
@@ -225,10 +229,11 @@ main {
 
     .dots {
         display: flex;
-        width: 15%;
-        justify-content: space-around;
+        width: auto;
+        justify-content: center;
 
         span {
+            margin: 0 .25em;
             display: flex;
             width: 32px;
             height: 32px;
@@ -254,6 +259,9 @@ main {
 
 .side {
     transition: 200ms ease-in-out;
+    color: $color;
+    font-size: 1rem;
+    font-weight: bold;
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.2);
@@ -269,7 +277,7 @@ main {
 
         span {
             margin: 2px;
-            width: 60px;
+            width: 45px;
             height: 4px;
             background-color: $color;
         }
