@@ -4,6 +4,7 @@ $footer-font: "Yeseva One",
 cursive;
 $primary: #003a96;
 $color: #e6e6e6;
+$progress: #fff;
 
 *,
 ::before,
@@ -12,6 +13,7 @@ $color: #e6e6e6;
 }
 
 body {
+    position: relative;
     margin: 0;
     overflow: hidden;
     display: grid;
@@ -23,8 +25,38 @@ body {
     font-family: $body-font;
     font-size: 62.5%;
     background-color: $primary;
-    background-image: url(/aqua/src/bg_home.jpg);
-    background-size: cover;
+
+    &::before {
+        position: absolute;
+        z-index: -1;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        content: '';
+        background-image: url(/aqua/src/bg_home.jpg);
+        background-size: cover;
+        animation: bgbody 60s ease-in-out infinite;
+    }
+}
+
+@keyframes bgbody {
+    0% {
+        background-image: url(/aqua/src/bg_home.jpg);
+    }
+
+    20%,
+    60% {
+        background-image: url(/aqua/src/bg_3.jpg);
+    }
+
+    40% {
+        background-image: url(/aqua/src/bg_2.jpg);
+    }
+
+    80% {
+        background-image: url(/aqua/src/bg_4.jpg);
+    }
 }
 
 header {
@@ -38,6 +70,7 @@ header {
     .logo {
         display: flex;
         align-items: center;
+
         svg {
             margin-right: 20px;
             width: 64px;
@@ -83,7 +116,7 @@ header {
                 font-size: 1.25rem;
                 border: 1px solid rgba(255, 255, 255, 0.4);
                 border-radius: 50%;
-                
+
                 &::before {
                     position: absolute;
                     top: -3px;
@@ -114,12 +147,14 @@ header {
     50% {
         stroke-dashoffset: 100%;
     }
+
     100% {
         stroke-dashoffset: 0;
     }
 }
 
 @keyframes pulse {
+
     0%,
     20%,
     40%,
@@ -127,6 +162,7 @@ header {
     80% {
         transform: scale(1.1) rotate(-45deg);
     }
+
     10%,
     30%,
     50%,
@@ -147,7 +183,7 @@ main {
 
     #bubbles {
         position: absolute;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         overflow: hidden;
         z-index: -1;
@@ -165,6 +201,10 @@ main {
 }
 
 .headline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     h1 {
         position: relative;
         margin: 0;
@@ -190,6 +230,83 @@ main {
             }
         }
     }
+
+    form {
+        padding: 2em;
+        padding-bottom: 4em;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        color: $color;
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba($color, 0.1), rgba($primary, 0.5));
+
+        h3,
+        input[type="button"] {
+            text-transform: uppercase;
+        }
+
+        input[type="text"],
+        input[type="button"] {
+            border-radius: 0.5em;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input[type="text"] {
+            margin-bottom: 1.25em;
+            padding: 1em 3em;
+            padding-left: 0.5em;
+            min-height: 3em;
+            font-size: 1rem;
+            color: $color;
+            border: 3px solid rgba($color, 0.4);
+            background-color: rgba($color, 0.2);
+            box-shadow: inset -1px 0px 5px $primary;
+
+            &::placeholder {
+                color: rgba($color, 0.7);
+            }
+        }
+
+        label {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 00%;
+                height: 100%;
+                content: '';
+                transition: all .2s linear;
+                border-radius: 0.5em;
+                background: linear-gradient(90deg, rgba($color, 0.8), rgba($primary, 0.1));
+            }
+
+            &:hover {
+
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        input[type="button"] {
+            width: 100%;
+            min-height: 3em;
+            font-size: 1rem;
+            cursor: pointer;
+            color: $color;
+            border: 1px solid rgba($color, 0.4);
+            background: linear-gradient(90deg, rgba($color, 0.2), rgba($primary, 0.8));
+            box-shadow: 0px 2px 5px $primary;
+        }
+    }
 }
 
 @keyframes fadeIn {
@@ -197,6 +314,7 @@ main {
         opacity: 0;
         transform: scale(0);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -314,6 +432,7 @@ main {
         justify-content: center;
         align-items: center;
         transform: rotate(90deg);
+        cursor: pointer;
 
         span {
             margin: 2px;
