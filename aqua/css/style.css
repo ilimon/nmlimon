@@ -69,6 +69,8 @@ header .logo svg {
   width: 48px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  -webkit-animation: pulse 5s ease-in-out infinite;
+          animation: pulse 5s ease-in-out infinite;
 }
 
 header .logo svg path {
@@ -79,11 +81,6 @@ header .logo svg path {
   stroke-dashoffset: 4000;
   -webkit-animation: dash 2s linear forwards;
           animation: dash 2s linear forwards;
-}
-
-header .logo svg:hover {
-  -webkit-animation: pulse 5s ease-in-out infinite;
-          animation: pulse 5s ease-in-out infinite;
 }
 
 header .logo h2 {
@@ -489,16 +486,35 @@ main #bubbles {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   cursor: pointer;
 }
 
 .side .nav span {
   margin: 2px;
-  width: 45px;
-  height: 4px;
+  width: 4px;
+  height: 45px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   background-color: #e6e6e6;
+}
+
+.side .nav i {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  font-style: normal;
+}
+
+.side .nav:hover span:nth-child(2) {
+  -webkit-transform: translateX(-22px);
+          transform: translateX(-22px);
+}
+
+.side .nav:hover i {
+  -webkit-transform: translateX(6px);
+          transform: translateX(6px);
 }
 
 footer {
