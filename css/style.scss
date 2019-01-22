@@ -1,8 +1,8 @@
 $light: #ffffff;
-$royalblue: #4954de;
-$turquoise: #49ddd8;
-$mediumpurple: #a68eff;
 $deepskyblue: #009de9;
+$turquoise: #49ddd8;
+$royalblue: #4954de;
+$midnightblue: #150941;
 
 @mixin font-size($sizeValue: 1.6) {
     font-size: $sizeValue + rem;
@@ -109,21 +109,26 @@ body {
 
                 &.lead {
                     @include font-size(1.25);
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    user-select: none;
                 }
             }
         }
 
         h1,
         h2 {
-            margin: 0.5em 0;
+            margin: 0;
             text-transform: uppercase;
         }
 
         h1 {
             @include font-size(5);
+            user-select: none;
         }
 
         h2 {
+            margin: 0.5em 0;
             @include font-size(2.25);
         }
 
@@ -133,7 +138,7 @@ body {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(4, auto);
-            grid-template-areas: "last last";
+            grid-template-areas: "last last"". ."". ."". .""link link";
             grid-gap: 2em 1em;
 
             .block {
@@ -172,6 +177,21 @@ body {
                     font-family: 'Varela Round', sans-serif;
                 }
             }
+
+            p {
+                grid-area: link;
+                text-align: center;
+
+                a {
+                    text-decoration: none;
+                    color: $light;
+                    border-bottom: 1px dashed $light;
+
+                    &:hover {
+                        border-bottom-style: solid;
+                    }
+                }
+            }
         }
 
         .center {
@@ -196,19 +216,19 @@ body {
 }
 
 .section-1 {
-    background-image: linear-gradient(-45deg, $deepskyblue, $royalblue);
+    background-image: linear-gradient(-45deg, $midnightblue, $deepskyblue);
 }
 
 .section-2 {
-    background-image: linear-gradient(-45deg, $royalblue, $turquoise);
+    background-image: linear-gradient(-45deg, $deepskyblue, $turquoise);
 }
 
 .section-3 {
-    background-image: linear-gradient(-45deg, $turquoise, $mediumpurple);
+    background-image: linear-gradient(-45deg, $deepskyblue, $royalblue);
 }
 
 .section-4 {
-    background-image: linear-gradient(-45deg, $mediumpurple, $deepskyblue);
+    background-image: linear-gradient(-45deg, $turquoise, $deepskyblue);
 }
 
 .logo {
@@ -256,7 +276,7 @@ body {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(45deg, $royalblue, $turquoise);
+    background-image: linear-gradient(-45deg, $turquoise, $royalblue);
 
     .close {
         position: absolute;
@@ -339,13 +359,7 @@ body {
     transform: translate3d(100%, 240px, 0);
 }
 
-footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    padding: 1em;
+.copy {
     display: flex;
     justify-content: center;
     align-items: center;
