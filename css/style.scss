@@ -14,8 +14,23 @@ $deepskyblue: #009de9;
     box-sizing: border-box;
 }
 
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
     font: normal 62.5% 'Raleway', cursive;
 }
 
@@ -38,11 +53,12 @@ body {
     left: 0;
     z-index: 1;
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    width: 100vw;
     height: 100%;
+    overflow-x: hidden;
     overflow-y: auto;
     padding: 2.25em 6em;
+    flex-direction: column;
 
     transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.1, 1.1);
     transform: translate3d(0, 0, 0);
@@ -99,7 +115,7 @@ body {
 
         h1,
         h2 {
-            margin: 0 2em;
+            margin: 0.5em 0;
             text-transform: uppercase;
         }
 
@@ -113,20 +129,29 @@ body {
 
         .grid {
             margin-bottom: 4em;
+            padding-top: 1em;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            grid-gap: 0.25em;
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas: "last last";
+            grid-gap: 2em 1em;
 
             .block {
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                border-radius: 0.25em;
+                align-items: flex-start;
+
+                &:first-child {
+                    grid-area: last;
+                }
+
+                figure {
+                    margin: 1em;
+                }
 
                 a {
                     display: block;
-                    margin-bottom: 1em;
+                    margin-bottom: 2em;
                     transition: 200ms linear;
                     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -144,6 +169,7 @@ body {
 
                 figcaption {
                     text-align: center;
+                    font-family: 'Varela Round', sans-serif;
                 }
             }
         }
@@ -228,7 +254,7 @@ body {
 .card-menu {
     position: absolute;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: linear-gradient(45deg, $royalblue, $turquoise);
 
@@ -323,6 +349,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Varela Round', sans-serif;
     @include font-size(1);
     color: $light;
     user-select: none;
