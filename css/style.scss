@@ -73,6 +73,7 @@ body {
         left: -90px;
         content: attr(data-title);
         text-transform: uppercase;
+        white-space: nowrap;
         @include font-size(15);
         font-weight: bold;
         color: $light;
