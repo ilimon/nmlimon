@@ -2,7 +2,9 @@ $light: #ffffff;
 $deepskyblue: #009de9;
 $turquoise: #49ddd8;
 $royalblue: #4954de;
-$midnightblue: #150941;
+$salmon: #fd6470;
+$midnightblue: #1d185a;
+$crimson: #da1b60;
 
 @mixin font-size($sizeValue: 1.6) {
     font-size: $sizeValue + rem;
@@ -217,19 +219,19 @@ body {
 }
 
 .section-1 {
-    background-image: linear-gradient(-45deg, $royalblue, $deepskyblue);
+    background-image: linear-gradient(-45deg, $turquoise, $deepskyblue);
 }
 
 .section-2 {
-    background-image: linear-gradient(-45deg, $deepskyblue, $turquoise);
+    background-image: linear-gradient(-45deg, $royalblue, $turquoise);
 }
 
 .section-3 {
-    background-image: linear-gradient(-45deg, $deepskyblue, $royalblue);
+    background-image: linear-gradient(-45deg, $midnightblue, $royalblue);
 }
 
 .section-4 {
-    background-image: linear-gradient(-45deg, $turquoise, $deepskyblue);
+    background-image: linear-gradient(45deg, $crimson, $salmon);
 }
 
 .logo {
@@ -277,7 +279,7 @@ body {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(-45deg, $turquoise, $royalblue);
+    background-image: linear-gradient(45deg, $midnightblue, $deepskyblue);
 
     .close {
         position: absolute;
