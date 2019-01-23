@@ -41,7 +41,7 @@ body {
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 106px 1fr 100px;
+    grid-template-rows: auto 1fr 100px;
     font-size: 62.5%;
     background-color: $red_a;
     background-image: linear-gradient(to bottom, $red_b 50%, $red_a);
