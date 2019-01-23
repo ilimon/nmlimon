@@ -36,17 +36,35 @@ body {
     font: normal 62.5% 'Raleway', cursive;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
+// ::-webkit-scrollbar {
+//     width: 8px;
+// }
+
+// ::-webkit-scrollbar-track {
+//     background: rgba(255, 255, 255, 0.2);
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     border-radius: .35rem;
+//     background: $deepskyblue;
+// }
+
+a {
+    text-decoration: none;
+    color: $light;
+
+    &.button {
+        padding-bottom: 0.25em;
+        border-bottom: 1px dashed $light;
+
+        &:hover {
+            border-bottom-style: solid;
+        }
+    }
 }
 
-::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: .35rem;
-    background: $deepskyblue;
+ul {
+    padding: 0;
 }
 
 .section {
@@ -167,7 +185,6 @@ body {
                         display: block;
                         width: 100%;
                         border-radius: 0.25em;
-                        box-shadow: 0px 5px 20px rgba($turquoise, 0.3);
                     }
 
                     &:hover {
@@ -184,16 +201,6 @@ body {
             p {
                 grid-area: link;
                 text-align: center;
-
-                a {
-                    text-decoration: none;
-                    color: $light;
-                    border-bottom: 1px dashed $light;
-
-                    &:hover {
-                        border-bottom-style: solid;
-                    }
-                }
             }
         }
 
@@ -201,6 +208,25 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            &.aifs {
+                align-items: flex-start;
+            }
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .skills {
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .author {
+            margin-right: 1em;
+            width: 200px;
+            border-radius: 50%;
         }
 
         .social {
@@ -261,15 +287,15 @@ body {
         background: $light;
         border-radius: 2px;
         box-shadow:
-            0px -8px $light,
-            0px 8px $light;
+            8px -8px $light,
+            4px 8px $light;
     }
 
     &:hover {
         &::before {
             box-shadow:
-                8px -8px $light,
-                4px 8px $light;
+                0px -8px $light,
+                0px 8px $light;
         }
     }
 }
