@@ -33,21 +33,8 @@ body {
     margin: 0;
     width: 100vw;
     overflow-x: hidden;
-    font: normal 62.5% 'Raleway', cursive;
+    font: 500 62.5% 'Raleway', cursive;
 }
-
-// ::-webkit-scrollbar {
-//     width: 8px;
-// }
-
-// ::-webkit-scrollbar-track {
-//     background: rgba(255, 255, 255, 0.2);
-// }
-
-// ::-webkit-scrollbar-thumb {
-//     border-radius: .35rem;
-//     background: $deepskyblue;
-// }
 
 a {
     text-decoration: none;
@@ -129,10 +116,33 @@ ul {
                 max-width: 80%;
 
                 &.lead {
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
                     @include font-size(1.25);
                     font-weight: 600;
                     letter-spacing: 2px;
                     user-select: none;
+
+                    span {
+                        margin: 0 1em;
+                        opacity: 0;
+                        animation: lead 2s cubic-bezier(1, -1, 0.65, -1) forwards;
+
+                        &:nth-child(2) {
+                            animation-delay: 0.5s;
+                        }
+
+                        &:nth-child(3) {
+                            animation-delay: 0.75s;
+                        }
+
+                        &:nth-child(4) {
+                            animation-delay: 1s;
+                        }
+                    }
                 }
             }
         }
@@ -241,6 +251,20 @@ ul {
                 color: $light;
             }
         }
+    }
+}
+
+@keyframes lead {
+    0% {
+        transform: scale(10);
+        filter: blur(10px);
+    }
+
+    50%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0px);
     }
 }
 
