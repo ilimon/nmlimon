@@ -20,7 +20,7 @@ body {
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
-  font: normal 62.5% 'Raleway', cursive;
+  font: 500 62.5% 'Raleway', cursive;
 }
 
 a {
@@ -127,6 +127,17 @@ ul {
 }
 
 .section .content.center p.lead {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -134,6 +145,28 @@ ul {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.section .content.center p.lead span {
+  margin: 0 1em;
+  opacity: 0;
+  -webkit-animation: lead 2s cubic-bezier(1, -1, 0.65, -1) forwards;
+          animation: lead 2s cubic-bezier(1, -1, 0.65, -1) forwards;
+}
+
+.section .content.center p.lead span:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.section .content.center p.lead span:nth-child(3) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.section .content.center p.lead span:nth-child(4) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .section .content h1,
@@ -273,6 +306,40 @@ ul {
   margin: 0.25em;
   font-size: 3rem;
   color: #ffffff;
+}
+
+@-webkit-keyframes lead {
+  0% {
+    -webkit-transform: scale(10);
+            transform: scale(10);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+  50%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@keyframes lead {
+  0% {
+    -webkit-transform: scale(10);
+            transform: scale(10);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+  50%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
 }
 
 .section-1 {
