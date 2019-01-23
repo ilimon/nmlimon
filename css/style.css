@@ -23,17 +23,22 @@ body {
   font: normal 62.5% 'Raleway', cursive;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
+a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.2);
+a.button {
+  padding-bottom: 0.25em;
+  border-bottom: 1px dashed #ffffff;
 }
 
-::-webkit-scrollbar-thumb {
-  border-radius: .35rem;
-  background: #009de9;
+a.button:hover {
+  border-bottom-style: solid;
+}
+
+ul {
+  padding: 0;
 }
 
 .section {
@@ -199,8 +204,6 @@ body {
   display: block;
   width: 100%;
   border-radius: 0.25em;
-  -webkit-box-shadow: 0px 5px 20px rgba(73, 221, 216, 0.3);
-          box-shadow: 0px 5px 20px rgba(73, 221, 216, 0.3);
 }
 
 .section .content .grid .block a:hover {
@@ -221,16 +224,6 @@ body {
   text-align: center;
 }
 
-.section .content .grid p a {
-  text-decoration: none;
-  color: #ffffff;
-  border-bottom: 1px dashed #ffffff;
-}
-
-.section .content .grid p a:hover {
-  border-bottom-style: solid;
-}
-
 .section .content .center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,6 +234,30 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.section .content .center.aifs {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.section .content .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section .content .skills {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.section .content .author {
+  margin-right: 1em;
+  width: 200px;
+  border-radius: 50%;
 }
 
 .section .content .social {
@@ -305,13 +322,13 @@ body {
   transition: box-shadow 100ms linear, -webkit-box-shadow 100ms linear;
   background: #ffffff;
   border-radius: 2px;
-  -webkit-box-shadow: 0px -8px #ffffff, 0px 8px #ffffff;
-          box-shadow: 0px -8px #ffffff, 0px 8px #ffffff;
+  -webkit-box-shadow: 8px -8px #ffffff, 4px 8px #ffffff;
+          box-shadow: 8px -8px #ffffff, 4px 8px #ffffff;
 }
 
 .btn:hover::before {
-  -webkit-box-shadow: 8px -8px #ffffff, 4px 8px #ffffff;
-          box-shadow: 8px -8px #ffffff, 4px 8px #ffffff;
+  -webkit-box-shadow: 0px -8px #ffffff, 0px 8px #ffffff;
+          box-shadow: 0px -8px #ffffff, 0px 8px #ffffff;
 }
 
 .card-menu {
