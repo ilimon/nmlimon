@@ -623,7 +623,7 @@ ul {
     margin-left: 3em;
   }
   .section .content {
-    padding: 1em;
+    padding: 1.5em;
   }
   .section .content .aifs {
     -webkit-box-orient: vertical;
@@ -638,8 +638,11 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .section .content .headline {
-    font-size: 3rem;
+  .section .content h1 {
+    font-size: 2.5rem;
+  }
+  .section .content .social a {
+    font-size: 1.25rem;
   }
   .section .content .skills {
     -webkit-box-orient: vertical;
