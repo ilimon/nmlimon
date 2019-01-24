@@ -189,8 +189,8 @@ ul {
 }
 
 .section .content .grid {
-  margin-bottom: 1em;
-  padding-top: 1em;
+  margin-top: 1em;
+  margin-bottom: 3em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -581,24 +581,29 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
-  .section {
-    padding: 2em;
+@media (max-width: 991px) {
+  .section .content.center {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  .section .heading {
-    margin-top: 0.2em;
-    margin-left: 3em;
-  }
-  .section .content .aifs {
+  .section .content.center p.lead {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .section .content .social a {
+    font-size: 2rem;
   }
   .section .content .author {
-    width: 120px;
+    display: none;
   }
   .section .content .skills {
+    margin-bottom: 3em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -607,9 +612,52 @@ ul {
   .section .content .skills .block {
     width: 50%;
   }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2em;
+  }
+  .section .heading {
+    margin-top: 0.2em;
+    margin-left: 3em;
+  }
+  .section .content {
+    padding: 1em;
+  }
+  .section .content .aifs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .section .content .grid .block .iframe {
     width: 92%;
     height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section .content .headline {
+    font-size: 3rem;
+  }
+  .section .content .skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section .content .skills .block {
+    width: 100%;
+  }
+  .section .content .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */
