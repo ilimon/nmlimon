@@ -590,10 +590,6 @@ ul {
 }
 
 @-webkit-keyframes name {
-  50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
   60% {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
@@ -601,10 +597,6 @@ ul {
 }
 
 @keyframes name {
-  50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
   60% {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
