@@ -304,10 +304,36 @@ ul {
             display: flex;
 
             a {
+                position: relative;
                 display: block;
-                margin: 0.25em;
+                margin: 0.5em;
                 @include font-size(3);
                 color: $light;
+
+                &::before {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translate(-50%, 5px);
+                    padding: 0.5em;
+                    content: attr(data-title);
+                    font-size: 0.825rem;
+                    color: $light; 
+                    border-radius: 1em;
+                    background-color: rgba($light, 0.25);
+                    transition: transform 0.2s ease-out;
+                    will-change: transform;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                &:hover {
+                    &::before {
+                        transform: translate(-50%, 30px);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
             }
         }
     }
@@ -536,6 +562,15 @@ ul {
                     .iframe {
                         width: 92%;
                         height: 300px;
+                    }
+                }
+            }
+
+            .social {
+                a {
+                    margin: 0.25em;
+                    &:before {
+                        display: none;
                     }
                 }
             }
