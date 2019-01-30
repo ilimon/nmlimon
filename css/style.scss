@@ -156,6 +156,7 @@ ul {
         h1 {
             @include font-size(5);
             user-select: none;
+            animation: name 0.5s cubic-bezier(0.18, 0.89, 0.29, 1.05) 2.3s forwards;
         }
 
         h2 {
@@ -309,27 +310,31 @@ ul {
                 margin: 0.5em;
                 @include font-size(3);
                 color: $light;
+                transform: translate(0, 0);
+                opacity: 0.63;
+                transition: transform 0.6s cubic-bezier(0, 0.6, 0.35, 1.21), opacity 0.2s ease;
 
                 &::before {
                     position: absolute;
                     left: 50%;
                     bottom: 0;
-                    transform: translate(-50%, 5px);
+                    transform: translate(-50%, 50px);
                     padding: 0.5em;
                     content: attr(data-title);
-                    font-size: 0.825rem;
-                    color: $light; 
-                    border-radius: 1em;
-                    background-color: rgba($light, 0.25);
-                    transition: transform 0.2s ease-out;
+                    font-size: 1rem;
+                    color: $light;
+                    transition: transform 0.6s cubic-bezier(0, 0.31, 0.22, 1.25), opacity 0.2s ease;
                     will-change: transform;
                     opacity: 0;
                     visibility: hidden;
                 }
 
                 &:hover {
+                    transform: translateY(-10px);
+                    opacity: 1;
+
                     &::before {
-                        transform: translate(-50%, 30px);
+                        transform: translate(-50%, 25px);
                         opacity: 1;
                         visibility: visible;
                     }
@@ -492,6 +497,15 @@ ul {
     user-select: none;
 }
 
+@keyframes name {
+    50% {
+        transform: scale(1.1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+}
+
 @keyframes lead {
     0% {
         transform: scale(10);
@@ -570,6 +584,11 @@ ul {
             .social {
                 a {
                     margin: 0.25em;
+                    
+                    &:hover {
+                        transform: none;
+                    }
+                    
                     &:before {
                         display: none;
                     }
