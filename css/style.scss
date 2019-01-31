@@ -487,6 +487,27 @@ ul {
     transform: translate3d(100%, 240px, 0);
 }
 
+.number {
+    position: absolute;
+    top: 10%;
+    left: 0.75em;
+    font-size: 1rem;
+    font-weight: 300;
+    color: $light;
+    display: flex;
+    align-items: center;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+
+    span {
+        margin: 10px;
+        width: 1px;
+        height: 60px;
+        background-color: $light;
+        opacity: 0.4;
+    }
+}
+
 .card {
     position: absolute;
     bottom: 0;
@@ -509,21 +530,15 @@ ul {
         &.w2 {
             background: darken($crimson, 5%);
             animation: vawe 7s infinite linear;
-          }
-          &.w3 {
+        }
+
+        &.w3 {
             background: darken($crimson, 15%);
             animation: vawe 9s infinite linear;
-          }
+        }
     }
 }
-@keyframes vawe {
-    30% {
-        border-radius: 23% 77% 52% 48% / 100% 100% 0% 0% ;
-    }
-    70% {
-        border-radius: 78% 22% 52% 48% / 100% 100% 0% 0% ;
-    }
-  }
+
 .copy {
     display: flex;
     justify-content: center;
@@ -551,6 +566,16 @@ ul {
         transform: scale(1);
         opacity: 1;
         filter: blur(0px);
+    }
+}
+
+@keyframes vawe {
+    30% {
+        border-radius: 23% 77% 52% 48% / 100% 100% 0% 0%;
+    }
+
+    70% {
+        border-radius: 78% 22% 52% 48% / 100% 100% 0% 0%;
     }
 }
 
@@ -618,11 +643,11 @@ ul {
             .social {
                 a {
                     margin: 0.25em;
-                    
+
                     &:hover {
                         transform: none;
                     }
-                    
+
                     &:before {
                         display: none;
                     }
@@ -632,7 +657,7 @@ ul {
     }
 }
 
-@media (max-width: 480px) {    
+@media (max-width: 480px) {
     .section {
         .content {
             h1 {
