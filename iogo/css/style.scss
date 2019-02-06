@@ -358,13 +358,36 @@ section {
     }
 
     h1 {
-      position: relative;
+      margin: 0;
+      font-size: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .title {
+      display: block;
+      width: 100%;
       font-family: 'Montserrat', sans-serif;
       font-size: 3rem;
+      font-weight: 600;
 
-      &::before {
-        @extend %before-style;
-        width: 50px;
+      text {
+        fill: none;
+        stroke: $light;
+        stroke-width: 2;
+        stroke-linecap: round;
+
+        stroke-dasharray: 700;
+        stroke-dashoffset: 1000;
+        animation: dash 3s linear forwards;
+      }
+
+      path {
+        stroke: $light;
+        stroke-width: 4;
+        stroke-dasharray: 700;
+        stroke-dashoffset: 1000;
+        animation: dash 4s ease-in forwards;
       }
     }
 
@@ -722,5 +745,12 @@ footer {
 @keyframes hearts {
   50% {
     transform: scale(1.4);
+  }
+}
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
   }
 }

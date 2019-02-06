@@ -1,4 +1,4 @@
-header h3::before, header ul li::before, section h2::before, section#home h1::before, footer .foo_logo::before {
+header h3::before, header ul li::before, section h2::before, footer .foo_logo::before {
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
@@ -424,13 +424,38 @@ section#home .content {
 }
 
 section#home h1 {
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
+  margin: 0;
+  font-size: 0;
+  visibility: hidden;
+  opacity: 0;
 }
 
-section#home h1::before {
-  width: 50px;
+section#home .title {
+  display: block;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+section#home .title text {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 3s linear forwards;
+          animation: dash 3s linear forwards;
+}
+
+section#home .title path {
+  stroke: #ffffff;
+  stroke-width: 4;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 4s ease-in forwards;
+          animation: dash 4s ease-in forwards;
 }
 
 section#home .lead {
@@ -833,6 +858,20 @@ footer .copy .heart {
   50% {
     -webkit-transform: scale(1.4);
             transform: scale(1.4);
+  }
+}
+
+@-webkit-keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
   }
 }
 /*# sourceMappingURL=style.css.map */
