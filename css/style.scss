@@ -165,18 +165,27 @@ ul {
         }
 
         .grid {
-            margin-top: 1em;
-            margin-bottom: 3em;
+            margin: 2em auto 3em;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(4, auto);
-            grid-template-areas: "last last"". ."". ."". .""link link";
-            grid-gap: 2em 1em;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: minmax(auto, repeat(6, 1fr));
+            grid-template-areas: "first first"". ."". ."". ."". .""last last";
+            grid-gap: 2em;
 
             .block {
+                margin: auto;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
+
+                &.g_first {
+                    grid-area: first;
+                }
+
+                &.g_last {
+                    grid-area: last;
+                    text-align: center;
+                }
 
                 &.flex {
                     display: flex;
@@ -185,10 +194,6 @@ ul {
                         flex-direction: column;
                         align-items: center;
                     }
-                }
-
-                &:first-child {
-                    grid-area: last;
                 }
 
                 figure {
@@ -232,11 +237,6 @@ ul {
                     text-align: center;
                     font-family: 'Varela Round', sans-serif;
                 }
-            }
-
-            p {
-                grid-area: link;
-                text-align: center;
             }
         }
 
