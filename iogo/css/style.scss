@@ -17,6 +17,19 @@ $light: #ffffff;
   transition: all 0.2s ease-out;
 }
 
+%curs {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+%curs-act {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
 *,
 ::before,
 ::after {
@@ -25,12 +38,11 @@ $light: #ffffff;
 
 body {
   margin: 0;
-  padding: 0.5em;
   padding-left: 0;
   height: 100vh;
   overflow: hidden;
   line-height: 1.5;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inconsolata', sans-serif;
   font-size: 62.5%;
   color: $light;
   background-color: $colone;
@@ -109,7 +121,7 @@ blockquote {
     top: -20px;
     right: 10px;
     z-index: 0;
-    content:'\f10d';
+    content: '\f10d';
     font-family: 'fontawesome';
     font-size: 5rem;
     color: $coltwo;
@@ -239,6 +251,7 @@ header {
   h3 {
     position: relative;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     color: $heart;
 
@@ -267,6 +280,8 @@ header {
       }
 
       a {
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
         font-weight: 500;
       }
 
@@ -282,7 +297,8 @@ header {
 
 .smooth {
   margin: 0 auto;
-  padding: 0 1em;
+  padding-left: 10px;
+  padding-right: 2px;
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -307,6 +323,7 @@ section {
   h2 {
     position: relative;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 
     &::before {
       @extend %before-style;
@@ -330,8 +347,7 @@ section {
       content: '';
       background-image: linear-gradient(to top,
         rgba($coltwo, 0.2) 0%,
-        $colone 100%
-        );
+        $colone 100%);
     }
 
     .content {
@@ -343,6 +359,7 @@ section {
 
     h1 {
       position: relative;
+      font-family: 'Montserrat', sans-serif;
       font-size: 3rem;
 
       &::before {
@@ -396,10 +413,10 @@ section {
 
     .block {
       position: relative;
-      margin: 1em auto;
+      margin: 0.5em auto;
       padding: 50px;
       overflow: hidden;
-      display: flex;
+      display: flex !important;
       width: 100%;
       flex-direction: column;
       justify-content: center;
@@ -410,38 +427,6 @@ section {
       transition: all 0.2s linear;
       will-change: transform;
 
-      &::before {
-        position: absolute;
-        top: -50%;
-        right: -25%;
-        z-index: 0;
-        width: 100%;
-        height: 100%;
-        content:'\f219';
-        font-family: 'fontawesome';
-        font-size: 20rem;
-        color: $coltwo;
-        opacity: 0.3;
-      }
-
-      &:nth-child(2) {
-        &:before {
-          content:'\f121';
-        }
-      }
-
-      &:nth-child(3) {
-        &:before {
-          content:'\f05b';
-        }
-      }
-
-      &:nth-child(4) {
-        &:before {
-          content:'\f25b';
-        }
-      }
-
       figure {
         position: relative;
         z-index: 1;
@@ -450,6 +435,7 @@ section {
 
 
         img {
+          margin: auto;
           width: 95px;
           height: 95px;
           border-radius: 50%;
@@ -477,6 +463,7 @@ section {
 
   &#letter {
     min-height: 50vh;
+
     form {
       width: 60%;
       justify-content: space-around;
@@ -495,13 +482,90 @@ section {
   }
 }
 
-.dot {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+.slider {
+  width: 90%;
 
-  span {
+  .slick-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slick-arrow {
+    width: 40px;
+    height: 100%;
+    text-align: center;
+
+    &::before {
+      width: inherit;
+      height: inherit;
+      font-size: 36px;
+      color: $border;
+    }
+  }
+
+  .slick-slide {
+    display: flex;
+    padding: 15px;
+    @extend %curs;
+
+    div {
+      .block {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: -25%;
+          right: -25%;
+          z-index: 0;
+          width: 100%;
+          height: 100%;
+          content: '\f219';
+          font-family: 'fontawesome';
+          font-size: 16rem;
+          color: $coltwo;
+          opacity: 0.3;
+        }
+
+        &.b_tw {
+          &:before {
+            content: '\f121';
+          }
+        }
+
+        &.b_th {
+          &:before {
+            content: '\f05b';
+          }
+        }
+
+        &.b_fo {
+          &:before {
+            content: '\f25b';
+          }
+        }
+
+        &.b_fi,
+        &.b_si {
+          &:before {
+            content: '\f201';
+          }
+        }
+      }
+    }
+
+    &:focus {
+      outline: none;
+      @extend %curs-act;
+    }
+  }
+}
+
+.slick-dots {
+  position: relative;
+  margin-top: 0.5em;
+
+  li {
     position: relative;
     margin: 1em 0.5em;
     width: 20px;
@@ -511,8 +575,14 @@ section {
     border-radius: 50%;
     background-color: $coltwo;
 
+    button {
+      &::before {
+        display: none;
+      }
+    }
+
     &:hover,
-    &.active {
+    &.slick-active {
       background-color: $border;
       transform: scale(1.2);
     }
@@ -520,9 +590,14 @@ section {
 }
 
 .post {
+  padding: 0.25em 0.5em;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
+  border: 4px solid transparent;
+  border-radius: 0.35em;
+  transition: transform 0.2s linear;
 
   h3 {
     margin: 0;
@@ -537,9 +612,37 @@ section {
   }
 
   .tags {
-    padding: 0.5em 0.25em;
+    position: relative;
+    padding: 0.5em 0;
+    padding-left: 30px;
     border-top: 1px solid $border;
     color: darken($light, 60%);
+
+    a {
+      color: darken($light, 60%);
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      content: '\f02c';
+      font-family: 'fontawesome';
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &:hover {
+    transform: scale(0.98);
+    background-color: $colone;
+
+    &:hover {
+      h3 {
+        color: $heart;
+      }
+    }
   }
 }
 
@@ -562,12 +665,13 @@ footer {
     .widget {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
   }
 
   .foo_logo {
     position: relative;
+    font-family: 'Montserrat', sans-serif;
     color: $heart;
 
     &::before {
@@ -578,6 +682,7 @@ footer {
 
   h5 {
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 
     &.follow {
       color: $heart;
