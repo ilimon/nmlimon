@@ -263,7 +263,7 @@ footer .author {
 @media (max-width: 991px) {
   body {
     height: auto;
-        grid-template-areas: 'header' 'nav' 'main' 'footer';
+        grid-template-areas: 'header' 'nav' 'main' 'footer';
     -ms-grid-rows: 23vh 1fr 6fr 23vh;
     grid-template-rows: 23vh 1fr 6fr 23vh;
     -ms-grid-columns: 1fr;
