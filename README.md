@@ -20,6 +20,7 @@ Web page for testing and publishing own projects
 | [Box-Shadows.CSS][7] | A cross-browser collection of CSS box-shadows | Grid + Flex |**January**| [GitHub][git7] |
 | [Underwater world][8] | Underwater world - is so amazing and versatile | Grid + Flex |**January**| [GitHub][git8] |
 | [iOGO MEDiA][9] | iOGO MEDiA · a creative approach to every detail | Grid + Flex |**February**| [GitHub][git9] |
+| [Demix][10] | Demix - technological clothes, shoes and equipment for sports and training | Grid + Flex |**March**| [GitHub][git10] |
 |  |  |  |  |  |
 
 ---
@@ -46,3 +47,5 @@ design by [Andrej Sharapov][designer]
 [git8]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/aqua
 [9]: https://andrejsharapov.github.io/iogo/ "iOGO MEDiA · a creative approach to every detail"
 [git9]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/iogo
+[10]: https://andrejsharapov.github.io/sport/ "Demix - technological clothes, shoes and equipment for sports and training"
+[git10]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/sport
