@@ -20,7 +20,7 @@ Web page for testing and publishing own projects
 | [Box-Shadows.CSS][7] | A cross-browser collection of CSS box-shadows | Grid + Flex |**January**| [GitHub][git7] |
 | [Underwater world][8] | Underwater world - is so amazing and versatile | Grid + Flex |**January**| [GitHub][git8] |
 | [iOGO MEDiA][9] | iOGO MEDiA · a creative approach to every detail | Grid + Flex |**February**| [GitHub][git9] |
-| [Demix][10] | Demix - technological clothes, shoes and equipment for sports and training | Grid + Flex |**March**| [GitHub][git10] |
+| [Demix][10] | Demix - technological clothes, shoes and equipment | Grid + Flex |**March**| [GitHub][git10] |
 |  |  |  |  |  |
 
 ---
