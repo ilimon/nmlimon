@@ -50,5 +50,5 @@ design by [Andrej Sharapov][designer]
 [git9]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/iogo
 [10]: https://andrejsharapov.github.io/sport/ "Demix - technological clothes, shoes and equipment for sports and training"
 [git10]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/sport
-[11]: https://andrejsharapov.github.io/auto/ "Car service - Hand over your old car and get a discount on a new one."
+[11]: https://andrejsharapov.github.io/auto/ "Hand over your old car and get a discount on a new one."
 [git11]: https://github.com/andrejsharapov/andrejsharapov.github.io/tree/master/auto
