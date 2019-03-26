@@ -361,7 +361,7 @@ ul {
 .section .content .author {
   margin-right: 1em;
   width: 200px;
-  border-radius: 50%;
+  border-radius: 1em;
 }
 
 .section .content .social {
