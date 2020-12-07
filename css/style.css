@@ -351,11 +351,11 @@ ul {
   position: absolute;
   left: 0;
   font-family: "Font Awesome 5 Free";
-  content: '\f10c';
+  content: "\f10c";
 }
 
 .section .content .skills ul li:hover::before {
-  content: '\f111';
+  content: "\f111";
 }
 
 .section .content .author {
@@ -642,7 +642,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Nunito';
   font-size: 1rem;
   color: #ffffff;
   -webkit-user-select: none;
