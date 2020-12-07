@@ -351,7 +351,7 @@ ul {
   position: absolute;
   left: 0;
   font-family: "Font Awesome 5 Free";
-  content: "\f10c";
+  content: "\f192";
 }
 
 .section .content .skills ul li:hover::before {
@@ -643,7 +643,8 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Nunito';
-  font-size: 1rem;
+  font-size: 0.75rem;
+  opacity: 0.85;
   color: #ffffff;
   -webkit-user-select: none;
      -moz-user-select: none;
