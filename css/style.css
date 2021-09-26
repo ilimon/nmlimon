@@ -350,6 +350,7 @@ ul {
 .section .content .skills ul li::before {
   position: absolute;
   left: 0;
+  font-weight: 400;
   font-family: "Font Awesome 5 Pro";
   content: "\f192";
 }
