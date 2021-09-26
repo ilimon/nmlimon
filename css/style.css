@@ -290,7 +290,7 @@ ul {
 
 .section .content .grid .block figcaption {
   text-align: center;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 
 .section .content .center {
@@ -350,7 +350,7 @@ ul {
 .section .content .skills ul li::before {
   position: absolute;
   left: 0;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Pro";
   content: "\f192";
 }
 
